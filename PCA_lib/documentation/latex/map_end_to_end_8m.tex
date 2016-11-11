@@ -1,0 +1,238 @@
+\hypertarget{map_end_to_end_8m}{}\section{/\+Users/annsi118/\+Documents/\+Git\+\_\+projects/\+P\+C\+A/map\+End\+To\+End.m File Reference}
+\label{map_end_to_end_8m}\index{/\+Users/annsi118/\+Documents/\+Git\+\_\+projects/\+P\+C\+A/map\+End\+To\+End.\+m@{/\+Users/annsi118/\+Documents/\+Git\+\_\+projects/\+P\+C\+A/map\+End\+To\+End.\+m}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+id \hyperlink{map_end_to_end_8m_a99716bc9e3670ef8bdae76de0e833de2}{lines\+In\+Block} ()
+\item 
+while \hyperlink{map_end_to_end_8m_a69a310a741b19826fac46e1b36a96301}{ischar} (\hyperlink{scaling_picture__new_8m_afaab4a5fa0f59da05985d86a8e6cdf83}{line}) \hyperlink{scaling_picture__new_8m_abc7c939800037017db49ee8e0dac2444}{if} strcmp(\hyperlink{scaling_picture__new_8m_a0736fc18fd1f21049126e64a04bef2a0}{empty\+Line}
+\item 
+end \hyperlink{map_end_to_end_8m_aa39fa0300318d82e5f0bfae0c8a1958d}{fclose} (\hyperlink{scaling_picture__new_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp})
+\item 
+\hyperlink{map_end_to_end_8m_aedb370a62e969986805864569e66b5a9}{file\+Name\+\_\+in} \hyperlink{map_end_to_end_8m_ab13cd35eef69d975288b45b2b932c032}{fopen} ()
+\item 
+draw surface \hyperlink{map_end_to_end_8m_a3c55990f04d5633808a4388e02c1bf94}{surf} (\hyperlink{map_end_to_end_movie_8m_a24b667e00c87fc861ab4e0fbd342ec24}{X}, \hyperlink{map_end_to_end_movie_8m_a0867f43e27585e019c13f7f4b7c4ab6b}{Y}, \hyperlink{map_end_to_end_movie_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}{Z}, \textquotesingle{}Line\+Style\textquotesingle{}, \textquotesingle{}none\textquotesingle{})
+\item 
+run file with color \hyperlink{color_map_8m_aeeed7664a6b3eb1571a73599f0b7fc1f}{map} description \hyperlink{map_end_to_end_8m_a48867d2ba8980b536f4e0aec2d8f478b}{colormap} (\hyperlink{color_map2_8m_a2dd0db0991d6c7a9bbb84a4ed102e33a}{color\+Map})
+\item 
+\hyperlink{map_end_to_end_8m_a7bc7a3f3e6eadb51cbce13efc71b8ec6}{colormap} (jet) colorbar
+\item 
+\hyperlink{map_end_to_end_8m_a5aa40431cd6ee846bdc3e2b198c152a2}{caxis} (\mbox{[}0, 1\mbox{]})
+\item 
+\hyperlink{map_end_to_end_8m_ad2ae7a220fd32e5f51d7cc6ea5babb77}{ylim} (\mbox{[}2 Inf\mbox{]})
+\item 
+\hyperlink{map_end_to_end_8m_a4636925a79b8d27d7c6aacc85e487b1c}{xlim} (\mbox{[}1 \hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N}\mbox{]})
+\item 
+\hyperlink{map_end_to_end_8m_a6df222152f98d93d5f9d31815b1fc1cd}{xlabel} (\textquotesingle{}Position\textquotesingle{}) ylabel(\textquotesingle{}Frame size\textquotesingle{}) \hyperlink{scaling_picture__new_8m_a70f8aa4fbe17fe3b32c5d3d45df93d7e}{view}(2)
+\item 
+\hyperlink{map_end_to_end_8m_ac2aedf948531e1f99ae7f941329263e5}{print} (gcf, \hyperlink{map_end_to_end_movie_8m_a3478f4b1dbf271120b389ae9403b97d1}{file\+Name\+\_\+out},\textquotesingle{}-\/dpng\textquotesingle{},\textquotesingle{}-\/\hyperlink{map_dot_product_8m_a4bd905f9f975425d1e5290d88813ce15}{r300}\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+clear \hyperlink{map_end_to_end_8m_a52fcb44dc57d4ff7fbd78e4d83b17506}{protein\+Name} = \textquotesingle{}N300\+\_\+coll\textquotesingle{}
+\item 
+\hyperlink{map_end_to_end_8m_aedb370a62e969986805864569e66b5a9}{file\+Name\+\_\+in} = sprintf(\textquotesingle{}results/\%s\+Map\+End\+To\+End.\+dat\textquotesingle{},\hyperlink{map_end_to_end_movie_8m_a52fcb44dc57d4ff7fbd78e4d83b17506}{protein\+Name})
+\item 
+\hyperlink{map_end_to_end_8m_a3478f4b1dbf271120b389ae9403b97d1}{file\+Name\+\_\+out} = sprintf(\textquotesingle{}results/\%s\+Map\+End\+To\+End\textquotesingle{},\hyperlink{map_end_to_end_movie_8m_a52fcb44dc57d4ff7fbd78e4d83b17506}{protein\+Name})
+\item 
+\hyperlink{map_end_to_end_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp} = \hyperlink{scaling_picture__new_8m_a570692257986f8c93dd73351c3e15cd3}{fopen}(\hyperlink{map_end_to_end_8m_aedb370a62e969986805864569e66b5a9}{file\+Name\+\_\+in})
+\item 
+\hyperlink{map_end_to_end_8m_a0736fc18fd1f21049126e64a04bef2a0}{empty\+Line} = sprintf(\textquotesingle{}\textbackslash{}n\textquotesingle{})
+\item 
+\hyperlink{map_end_to_end_8m_a9b8a010d00955ec85beb71187df3b8f7}{line} = fgets(\hyperlink{scaling_picture__new_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp})
+\item 
+while \hyperlink{scaling_picture__new_8m_afaab4a5fa0f59da05985d86a8e6cdf83}{line} break else \hyperlink{map_end_to_end_8m_a84da438879afc9f5611fb1fe3e4fa000}{lines\+In\+Block} =lines\+In\+Block+1
+\item 
+\hyperlink{map_end_to_end_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B} =fscanf(\hyperlink{scaling_picture__new_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}, \textquotesingle{}\%g \%g \%g\textquotesingle{}, \mbox{[}3 Inf\mbox{]})
+\item 
+\hyperlink{scaling_picture__new_8m_ade14806d8479f72c3259084f3e5c6381}{set} number of sites \hyperlink{map_end_to_end_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N} = \hyperlink{scaling_picture__new_8m_a99716bc9e3670ef8bdae76de0e833de2}{lines\+In\+Block}
+\item 
+create X \hyperlink{map_end_to_end_movie_8m_a0867f43e27585e019c13f7f4b7c4ab6b}{Y} \hyperlink{map_end_to_end_movie_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}{Z} matrixes for each data block in file \hyperlink{map_end_to_end_8m_a24b667e00c87fc861ab4e0fbd342ec24}{X} = reshape(\hyperlink{scaling_picture__new_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}(1,\+:)+\hyperlink{scaling_picture__new_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}(2,\+:)/2,\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N},\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N})\textquotesingle{}
+\item 
+\hyperlink{map_end_to_end_8m_a0867f43e27585e019c13f7f4b7c4ab6b}{Y} = reshape(\hyperlink{scaling_picture__new_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}(2,\+:),\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N},\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N})\textquotesingle{}
+\item 
+\hyperlink{map_end_to_end_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}{Z} = reshape(\hyperlink{scaling_picture__new_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}(3,\+:),\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N},\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N})\textquotesingle{}
+\item 
+settings for the plot \hyperlink{map_end_to_end_8m_a43407ff69e3bb54d7179a8098aaa56a8}{color\+Map1}
+\item 
+\hyperlink{map_end_to_end_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax} =gca
+\item 
+\hyperlink{map_end_to_end_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax} \hyperlink{map_end_to_end_8m_acfbf2e734f63fbb1d4b0057cd5a7b7db}{X\+Tick} =0\+:20\+:\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N}+10
+\item 
+\hyperlink{map_end_to_end_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax} \hyperlink{map_end_to_end_8m_a349c9423586da96186f07c42fefa15aa}{Y\+Tick} =0\+:20\+:\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N}+10
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{map_end_to_end_8m_a5aa40431cd6ee846bdc3e2b198c152a2}{}\label{map_end_to_end_8m_a5aa40431cd6ee846bdc3e2b198c152a2} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!caxis@{caxis}}
+\index{caxis@{caxis}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{caxis()}{caxis()}}
+{\footnotesize\ttfamily caxis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{map_end_to_end_8m_a48867d2ba8980b536f4e0aec2d8f478b}{}\label{map_end_to_end_8m_a48867d2ba8980b536f4e0aec2d8f478b} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!colormap@{colormap}}
+\index{colormap@{colormap}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{colormap()}{colormap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily run file with color \hyperlink{color_map_8m_aeeed7664a6b3eb1571a73599f0b7fc1f}{map} description colormap (\begin{DoxyParamCaption}\item[{\hyperlink{color_map2_8m_a2dd0db0991d6c7a9bbb84a4ed102e33a}{color\+Map}}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{map_end_to_end_8m_a7bc7a3f3e6eadb51cbce13efc71b8ec6}{}\label{map_end_to_end_8m_a7bc7a3f3e6eadb51cbce13efc71b8ec6} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!colormap@{colormap}}
+\index{colormap@{colormap}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{colormap()}{colormap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily colormap (\begin{DoxyParamCaption}\item[{jet}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{map_end_to_end_8m_aa39fa0300318d82e5f0bfae0c8a1958d}{}\label{map_end_to_end_8m_aa39fa0300318d82e5f0bfae0c8a1958d} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!fclose@{fclose}}
+\index{fclose@{fclose}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{fclose()}{fclose()}}
+{\footnotesize\ttfamily end fclose (\begin{DoxyParamCaption}\item[{\hyperlink{scaling_picture__new_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{map_end_to_end_8m_ab13cd35eef69d975288b45b2b932c032}{}\label{map_end_to_end_8m_ab13cd35eef69d975288b45b2b932c032} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!fopen@{fopen}}
+\index{fopen@{fopen}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{fopen()}{fopen()}}
+{\footnotesize\ttfamily \hyperlink{map_end_to_end_8m_aedb370a62e969986805864569e66b5a9}{file\+Name\+\_\+in} fopen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\hypertarget{map_end_to_end_8m_a69a310a741b19826fac46e1b36a96301}{}\label{map_end_to_end_8m_a69a310a741b19826fac46e1b36a96301} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!ischar@{ischar}}
+\index{ischar@{ischar}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{ischar()}{ischar()}}
+{\footnotesize\ttfamily while ischar (\begin{DoxyParamCaption}\item[{\hyperlink{scaling_picture__new_8m_afaab4a5fa0f59da05985d86a8e6cdf83}{line}}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{map_end_to_end_8m_a99716bc9e3670ef8bdae76de0e833de2}{}\label{map_end_to_end_8m_a99716bc9e3670ef8bdae76de0e833de2} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!lines\+In\+Block@{lines\+In\+Block}}
+\index{lines\+In\+Block@{lines\+In\+Block}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{lines\+In\+Block()}{linesInBlock()}}
+{\footnotesize\ttfamily id lines\+In\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\hypertarget{map_end_to_end_8m_ac2aedf948531e1f99ae7f941329263e5}{}\label{map_end_to_end_8m_ac2aedf948531e1f99ae7f941329263e5} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!print@{print}}
+\index{print@{print}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily print (\begin{DoxyParamCaption}\item[{gcf}]{,  }\item[{\hyperlink{map_end_to_end_movie_8m_a3478f4b1dbf271120b389ae9403b97d1}{file\+Name\+\_\+out}}]{,  }\item[{\textquotesingle{}-\/dpng\textquotesingle{}}]{,  }\item[{\textquotesingle{}-\/\hyperlink{map_dot_product_8m_a4bd905f9f975425d1e5290d88813ce15}{r300}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{map_end_to_end_8m_a3c55990f04d5633808a4388e02c1bf94}{}\label{map_end_to_end_8m_a3c55990f04d5633808a4388e02c1bf94} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!surf@{surf}}
+\index{surf@{surf}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{surf()}{surf()}}
+{\footnotesize\ttfamily draw surface surf (\begin{DoxyParamCaption}\item[{\hyperlink{map_end_to_end_movie_8m_a24b667e00c87fc861ab4e0fbd342ec24}{X}}]{,  }\item[{\hyperlink{map_end_to_end_movie_8m_a0867f43e27585e019c13f7f4b7c4ab6b}{Y}}]{,  }\item[{\hyperlink{map_end_to_end_movie_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}{Z}}]{,  }\item[{\textquotesingle{}Line\+Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}none\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{map_end_to_end_8m_a6df222152f98d93d5f9d31815b1fc1cd}{}\label{map_end_to_end_8m_a6df222152f98d93d5f9d31815b1fc1cd} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{xlabel()}{xlabel()}}
+{\footnotesize\ttfamily xlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}Position\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\hypertarget{map_end_to_end_8m_a4636925a79b8d27d7c6aacc85e487b1c}{}\label{map_end_to_end_8m_a4636925a79b8d27d7c6aacc85e487b1c} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!xlim@{xlim}}
+\index{xlim@{xlim}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{xlim()}{xlim()}}
+{\footnotesize\ttfamily xlim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{map_end_to_end_8m_ad2ae7a220fd32e5f51d7cc6ea5babb77}{}\label{map_end_to_end_8m_ad2ae7a220fd32e5f51d7cc6ea5babb77} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!ylim@{ylim}}
+\index{ylim@{ylim}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{ylim()}{ylim()}}
+{\footnotesize\ttfamily ylim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{map_end_to_end_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{}\label{map_end_to_end_8m_a8fa675eb2fcec5b95d9d21c670da7f30} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!ax@{ax}}
+\index{ax@{ax}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{ax}{ax}}
+{\footnotesize\ttfamily ax =gca}
+
+\hypertarget{map_end_to_end_8m_a9d3d9048db16a7eee539e93e3618cbe7}{}\label{map_end_to_end_8m_a9d3d9048db16a7eee539e93e3618cbe7} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!B@{B}}
+\index{B@{B}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily B =fscanf(\hyperlink{scaling_picture__new_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp}, \textquotesingle{}\%g \%g \%g\textquotesingle{}, \mbox{[}3 Inf\mbox{]})}
+
+\hypertarget{map_end_to_end_8m_a43407ff69e3bb54d7179a8098aaa56a8}{}\label{map_end_to_end_8m_a43407ff69e3bb54d7179a8098aaa56a8} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!color\+Map1@{color\+Map1}}
+\index{color\+Map1@{color\+Map1}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{color\+Map1}{colorMap1}}
+{\footnotesize\ttfamily settings for the plot color\+Map1}
+
+\hypertarget{map_end_to_end_8m_a0736fc18fd1f21049126e64a04bef2a0}{}\label{map_end_to_end_8m_a0736fc18fd1f21049126e64a04bef2a0} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!empty\+Line@{empty\+Line}}
+\index{empty\+Line@{empty\+Line}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{empty\+Line}{emptyLine}}
+{\footnotesize\ttfamily empty\+Line = sprintf(\textquotesingle{}\textbackslash{}n\textquotesingle{})}
+
+\hypertarget{map_end_to_end_8m_aedb370a62e969986805864569e66b5a9}{}\label{map_end_to_end_8m_aedb370a62e969986805864569e66b5a9} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!file\+Name\+\_\+in@{file\+Name\+\_\+in}}
+\index{file\+Name\+\_\+in@{file\+Name\+\_\+in}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{file\+Name\+\_\+in}{fileName\_in}}
+{\footnotesize\ttfamily file\+Name\+\_\+in = sprintf(\textquotesingle{}results/\%s\+Map\+End\+To\+End.\+dat\textquotesingle{},\hyperlink{map_end_to_end_movie_8m_a52fcb44dc57d4ff7fbd78e4d83b17506}{protein\+Name})}
+
+\hypertarget{map_end_to_end_8m_a3478f4b1dbf271120b389ae9403b97d1}{}\label{map_end_to_end_8m_a3478f4b1dbf271120b389ae9403b97d1} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!file\+Name\+\_\+out@{file\+Name\+\_\+out}}
+\index{file\+Name\+\_\+out@{file\+Name\+\_\+out}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{file\+Name\+\_\+out}{fileName\_out}}
+{\footnotesize\ttfamily file\+Name\+\_\+out = sprintf(\textquotesingle{}results/\%s\+Map\+End\+To\+End\textquotesingle{},\hyperlink{map_end_to_end_movie_8m_a52fcb44dc57d4ff7fbd78e4d83b17506}{protein\+Name})}
+
+\hypertarget{map_end_to_end_8m_a883a1b899b644be7fc6d704c1d8e0c04}{}\label{map_end_to_end_8m_a883a1b899b644be7fc6d704c1d8e0c04} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!fp@{fp}}
+\index{fp@{fp}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{fp}{fp}}
+{\footnotesize\ttfamily fp = \hyperlink{scaling_picture__new_8m_a570692257986f8c93dd73351c3e15cd3}{fopen}(\hyperlink{map_end_to_end_8m_aedb370a62e969986805864569e66b5a9}{file\+Name\+\_\+in})}
+
+\hypertarget{map_end_to_end_8m_a9b8a010d00955ec85beb71187df3b8f7}{}\label{map_end_to_end_8m_a9b8a010d00955ec85beb71187df3b8f7} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!line@{line}}
+\index{line@{line}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily end line = fgets(\hyperlink{scaling_picture__new_8m_a883a1b899b644be7fc6d704c1d8e0c04}{fp})}
+
+\hypertarget{map_end_to_end_8m_a84da438879afc9f5611fb1fe3e4fa000}{}\label{map_end_to_end_8m_a84da438879afc9f5611fb1fe3e4fa000} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!lines\+In\+Block@{lines\+In\+Block}}
+\index{lines\+In\+Block@{lines\+In\+Block}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{lines\+In\+Block}{linesInBlock}}
+{\footnotesize\ttfamily lines\+In\+Block =lines\+In\+Block+1}
+
+\hypertarget{map_end_to_end_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{}\label{map_end_to_end_8m_ab973269d31a5338a6f7b4937ab3fc8d9} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!N@{N}}
+\index{N@{N}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \hyperlink{scaling_picture__new_8m_ade14806d8479f72c3259084f3e5c6381}{set} number of sites N = \hyperlink{scaling_picture__new_8m_a99716bc9e3670ef8bdae76de0e833de2}{lines\+In\+Block}}
+
+\hypertarget{map_end_to_end_8m_a52fcb44dc57d4ff7fbd78e4d83b17506}{}\label{map_end_to_end_8m_a52fcb44dc57d4ff7fbd78e4d83b17506} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!protein\+Name@{protein\+Name}}
+\index{protein\+Name@{protein\+Name}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{protein\+Name}{proteinName}}
+{\footnotesize\ttfamily clear protein\+Name = \textquotesingle{}N300\+\_\+coll\textquotesingle{}}
+
+\hypertarget{map_end_to_end_8m_a24b667e00c87fc861ab4e0fbd342ec24}{}\label{map_end_to_end_8m_a24b667e00c87fc861ab4e0fbd342ec24} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!X@{X}}
+\index{X@{X}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily create X \hyperlink{map_end_to_end_movie_8m_a0867f43e27585e019c13f7f4b7c4ab6b}{Y} \hyperlink{map_end_to_end_movie_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}{Z} matrixes for each data block in file X = reshape(\hyperlink{scaling_picture__new_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}(1,\+:)+\hyperlink{scaling_picture__new_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}(2,\+:)/2,\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N},\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N})\textquotesingle{}}
+
+\hypertarget{map_end_to_end_8m_acfbf2e734f63fbb1d4b0057cd5a7b7db}{}\label{map_end_to_end_8m_acfbf2e734f63fbb1d4b0057cd5a7b7db} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!X\+Tick@{X\+Tick}}
+\index{X\+Tick@{X\+Tick}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{X\+Tick}{XTick}}
+{\footnotesize\ttfamily \hyperlink{map_end_to_end_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax} X\+Tick =0\+:20\+:\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N}+10}
+
+\hypertarget{map_end_to_end_8m_a0867f43e27585e019c13f7f4b7c4ab6b}{}\label{map_end_to_end_8m_a0867f43e27585e019c13f7f4b7c4ab6b} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!Y@{Y}}
+\index{Y@{Y}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{Y}{Y}}
+{\footnotesize\ttfamily Y = reshape(\hyperlink{scaling_picture__new_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}(2,\+:),\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N},\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N})\textquotesingle{}}
+
+\hypertarget{map_end_to_end_8m_a349c9423586da96186f07c42fefa15aa}{}\label{map_end_to_end_8m_a349c9423586da96186f07c42fefa15aa} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!Y\+Tick@{Y\+Tick}}
+\index{Y\+Tick@{Y\+Tick}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{Y\+Tick}{YTick}}
+{\footnotesize\ttfamily \hyperlink{map_end_to_end_8m_a8fa675eb2fcec5b95d9d21c670da7f30}{ax} Y\+Tick =0\+:20\+:\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N}+10}
+
+\hypertarget{map_end_to_end_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1}{}\label{map_end_to_end_8m_adc18d83abfd9f87d396e8fd6b6ac0fe1} 
+\index{map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}!Z@{Z}}
+\index{Z@{Z}!map\+End\+To\+End.\+m@{map\+End\+To\+End.\+m}}
+\subsubsection{\texorpdfstring{Z}{Z}}
+{\footnotesize\ttfamily Z = reshape(\hyperlink{scaling_picture__new_8m_a9d3d9048db16a7eee539e93e3618cbe7}{B}(3,\+:),\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N},\hyperlink{map_end_to_end_movie_8m_ab973269d31a5338a6f7b4937ab3fc8d9}{N})\textquotesingle{}}
+

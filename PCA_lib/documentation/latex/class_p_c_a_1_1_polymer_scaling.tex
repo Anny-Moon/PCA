@@ -1,0 +1,200 @@
+\hypertarget{class_p_c_a_1_1_polymer_scaling}{}\section{P\+CA\+:\+:Polymer\+Scaling Class Reference}
+\label{class_p_c_a_1_1_polymer_scaling}\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+
+
+{\ttfamily \#include $<$Polymer\+Scaling.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0}{Observable} \{ \hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0acfb5418d931d8d22420f6c47a22da603}{Observable\+::scaling\+Parameter}, 
+\hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0a1aa2ef7ad0fe7fe833729f2241ba944e}{Observable\+::total\+Angle}, 
+\hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0adf22918d9c11ad9d09982e92c8092123}{Observable\+::radius\+Of\+Gyration}, 
+\hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0add15ab7b58b9389187c6075211fbf198}{Observable\+::average\+Monomers\+Length}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_p_c_a_1_1_polymer_scaling_a5e0684790a3295de961dcc7b282c8c1f}{total\+Angle\+V\+Saverage\+Monomers\+Length} (const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, F\+I\+LE $\ast$result\+File, F\+I\+LE $\ast$conf\+File=N\+U\+LL, F\+I\+LE $\ast$num\+Monomers\+File=N\+U\+LL, F\+I\+LE $\ast$scaling\+Param\+File=N\+U\+LL, int loop\+Steps=100000)
+\item 
+void \hyperlink{class_p_c_a_1_1_polymer_scaling_a6c1fbca75891e468b75ac482347232df}{total\+Angle\+V\+Sintegral\+Monomers\+Length} (const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, F\+I\+LE $\ast$result\+File, F\+I\+LE $\ast$conf\+File=N\+U\+LL, F\+I\+LE $\ast$num\+Monomers\+File=N\+U\+LL, F\+I\+LE $\ast$scaling\+Param\+File=N\+U\+LL, int loop\+Steps=100000)
+\item 
+void \hyperlink{class_p_c_a_1_1_polymer_scaling_a9910d5acf149b15e92a5c4ddaf8dd944}{average\+Monomers\+Length\+V\+Sscaling\+Steps} (const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, F\+I\+LE $\ast$result\+File, F\+I\+LE $\ast$conf\+File=N\+U\+LL, F\+I\+LE $\ast$num\+Monomers\+File=N\+U\+LL, F\+I\+LE $\ast$scaling\+Param\+File=N\+U\+LL, int loop\+Steps=100000)
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Triangular maps\+:}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_p_c_a_1_1_polymer_scaling_a9ef7952c6b05b0614b81752f82f614a4}{write\+Map\+End\+To\+End\+Video} (char $\ast$\hyperlink{map_end_to_end_movie_8m_acbece2625a541230e9f9091adca38c8c}{file\+Name}, const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, F\+I\+LE $\ast$conf\+File=N\+U\+LL, F\+I\+LE $\ast$num\+Monomers\+File=N\+U\+LL, F\+I\+LE $\ast$scaling\+Param\+File=N\+U\+LL, int each\+Step=1)
+\item 
+void \hyperlink{class_p_c_a_1_1_polymer_scaling_aec67d14d95d0482dc7dc08155abb0609}{write\+Map\+Dot\+Product\+Video} (char $\ast$\hyperlink{map_end_to_end_movie_8m_acbece2625a541230e9f9091adca38c8c}{file\+Name}, const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, F\+I\+LE $\ast$conf\+File=N\+U\+LL, F\+I\+LE $\ast$num\+Monomers\+File=N\+U\+LL, F\+I\+LE $\ast$scaling\+Param\+File=N\+U\+LL, int each\+Step=1)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{class_p_c_a_1_1_polymer_scaling_a6188be73e2162d21f113a6cf8cde477b}{find\+Critical\+Scaling\+Param} (int num\+Monomers)
+\item 
+static int \hyperlink{class_p_c_a_1_1_polymer_scaling_ac58e92df3f25d46f03fe2231dcc1cf33}{find\+New\+Scaling\+Param} (int old\+Num\+Monomers, const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} $\ast$newS)
+\begin{DoxyCompactList}\small\item\em Returns new num\+Monomers! \end{DoxyCompactList}\item 
+static void \hyperlink{class_p_c_a_1_1_polymer_scaling_a209214a658e1da7ccc0e520742cd1e3d}{scaling} (\hyperlink{class_p_c_a_1_1_polymer}{Polymer} $\ast$$\ast$polymer, const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} $\ast$newS)
+\item 
+static void \hyperlink{class_p_c_a_1_1_polymer_scaling_a5286d41c8e899e596526fb936a5e2a9b}{scaling\+Loop} (\hyperlink{class_p_c_a_1_1_polymer}{Polymer} $\ast$$\ast$polymer, const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, F\+I\+LE $\ast$conf\+File=N\+U\+LL, F\+I\+LE $\ast$num\+Monomers\+File=N\+U\+LL, F\+I\+LE $\ast$scaling\+Param\+File=N\+U\+LL, int loop\+Steps=100000)
+\item 
+static void \hyperlink{class_p_c_a_1_1_polymer_scaling_a18511591a08a3c6bc6e5fbc48b488a41}{observable\+V\+Sscaling\+Steps} (\hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0}{Observable} observable, const \hyperlink{class_p_c_a_1_1_polymer}{Polymer} \&polymer, const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, char $\ast$result\+File, char $\ast$conf\+File=N\+U\+LL, char $\ast$num\+Monomers\+File=N\+U\+LL, char $\ast$scaling\+Param\+File=N\+U\+LL)
+\item 
+static void \hyperlink{class_p_c_a_1_1_polymer_scaling_aca7d618f0d4ffe3edb9c72ce28839e4f}{observable\+V\+Sscaling\+Steps\+With\+Statistics} (\hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0}{Observable} observable, char $\ast$data\+File\+Name, int statistics, const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&etalonS, char $\ast$result\+File, char $\ast$conf\+File=N\+U\+LL, char $\ast$num\+Monomers\+File=N\+U\+LL, char $\ast$scaling\+Param\+File=N\+U\+LL)
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Verbose functions\+:}\par
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_p_c_a_1_1_polymer_scaling_a02f133a0bfdf54a7677c8f9637a4238a}{set\+Verbose} (double \hyperlink{class_p_c_a_1_1_polymer_scaling_ade3a687fb33d7c74e78b38d3aca3a1ab}{verbose})
+\item 
+static bool \hyperlink{class_p_c_a_1_1_polymer_scaling_a9c421969a837baea23237375653898f6}{get\+Verbose} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_p_c_a_1_1_polymer_scaling_ade3a687fb33d7c74e78b38d3aca3a1ab}{verbose} = true
+\begin{DoxyCompactList}\small\item\em If false then this class is not allowed to print anything on screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0}{}\label{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!Observable@{Observable}}
+\index{Observable@{Observable}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{Observable}{Observable}}
+{\footnotesize\ttfamily enum \hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0}{P\+C\+A\+::\+Polymer\+Scaling\+::\+Observable}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{scaling\+Parameter@{scaling\+Parameter}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!scaling\+Parameter@{scaling\+Parameter}}}\hypertarget{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0acfb5418d931d8d22420f6c47a22da603}{}\label{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0acfb5418d931d8d22420f6c47a22da603} 
+scaling\+Parameter&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{total\+Angle@{total\+Angle}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!total\+Angle@{total\+Angle}}}\hypertarget{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0a1aa2ef7ad0fe7fe833729f2241ba944e}{}\label{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0a1aa2ef7ad0fe7fe833729f2241ba944e} 
+total\+Angle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{radius\+Of\+Gyration@{radius\+Of\+Gyration}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!radius\+Of\+Gyration@{radius\+Of\+Gyration}}}\hypertarget{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0adf22918d9c11ad9d09982e92c8092123}{}\label{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0adf22918d9c11ad9d09982e92c8092123} 
+radius\+Of\+Gyration&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{average\+Monomers\+Length@{average\+Monomers\+Length}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!average\+Monomers\+Length@{average\+Monomers\+Length}}}\hypertarget{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0add15ab7b58b9389187c6075211fbf198}{}\label{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0add15ab7b58b9389187c6075211fbf198} 
+average\+Monomers\+Length&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_p_c_a_1_1_polymer_scaling_a9910d5acf149b15e92a5c4ddaf8dd944}{}\label{class_p_c_a_1_1_polymer_scaling_a9910d5acf149b15e92a5c4ddaf8dd944} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!average\+Monomers\+Length\+V\+Sscaling\+Steps@{average\+Monomers\+Length\+V\+Sscaling\+Steps}}
+\index{average\+Monomers\+Length\+V\+Sscaling\+Steps@{average\+Monomers\+Length\+V\+Sscaling\+Steps}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{average\+Monomers\+Length\+V\+Sscaling\+Steps()}{averageMonomersLengthVSscalingSteps()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::average\+Monomers\+Length\+V\+Sscaling\+Steps (\begin{DoxyParamCaption}\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{F\+I\+LE $\ast$}]{result\+File,  }\item[{F\+I\+LE $\ast$}]{conf\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{num\+Monomers\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{scaling\+Param\+File = {\ttfamily NULL},  }\item[{int}]{loop\+Steps = {\ttfamily 100000} }\end{DoxyParamCaption})}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_a6188be73e2162d21f113a6cf8cde477b}{}\label{class_p_c_a_1_1_polymer_scaling_a6188be73e2162d21f113a6cf8cde477b} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!find\+Critical\+Scaling\+Param@{find\+Critical\+Scaling\+Param}}
+\index{find\+Critical\+Scaling\+Param@{find\+Critical\+Scaling\+Param}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{find\+Critical\+Scaling\+Param()}{findCriticalScalingParam()}}
+{\footnotesize\ttfamily double P\+C\+A\+::\+Polymer\+Scaling\+::find\+Critical\+Scaling\+Param (\begin{DoxyParamCaption}\item[{int}]{num\+Monomers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_ac58e92df3f25d46f03fe2231dcc1cf33}{}\label{class_p_c_a_1_1_polymer_scaling_ac58e92df3f25d46f03fe2231dcc1cf33} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!find\+New\+Scaling\+Param@{find\+New\+Scaling\+Param}}
+\index{find\+New\+Scaling\+Param@{find\+New\+Scaling\+Param}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{find\+New\+Scaling\+Param()}{findNewScalingParam()}}
+{\footnotesize\ttfamily int P\+C\+A\+::\+Polymer\+Scaling\+::find\+New\+Scaling\+Param (\begin{DoxyParamCaption}\item[{int}]{old\+Num\+Monomers,  }\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{\hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} $\ast$}]{newS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns new num\+Monomers! 
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_a9c421969a837baea23237375653898f6}{}\label{class_p_c_a_1_1_polymer_scaling_a9c421969a837baea23237375653898f6} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!get\+Verbose@{get\+Verbose}}
+\index{get\+Verbose@{get\+Verbose}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{get\+Verbose()}{getVerbose()}}
+{\footnotesize\ttfamily bool P\+C\+A\+::\+Polymer\+Scaling\+::get\+Verbose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_a18511591a08a3c6bc6e5fbc48b488a41}{}\label{class_p_c_a_1_1_polymer_scaling_a18511591a08a3c6bc6e5fbc48b488a41} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!observable\+V\+Sscaling\+Steps@{observable\+V\+Sscaling\+Steps}}
+\index{observable\+V\+Sscaling\+Steps@{observable\+V\+Sscaling\+Steps}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{observable\+V\+Sscaling\+Steps()}{observableVSscalingSteps()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::observable\+V\+Sscaling\+Steps (\begin{DoxyParamCaption}\item[{\hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0}{Polymer\+Scaling\+::\+Observable}}]{observable,  }\item[{const \hyperlink{class_p_c_a_1_1_polymer}{Polymer} \&}]{polymer,  }\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{char $\ast$}]{result\+File,  }\item[{char $\ast$}]{conf\+File = {\ttfamily NULL},  }\item[{char $\ast$}]{num\+Monomers\+File = {\ttfamily NULL},  }\item[{char $\ast$}]{scaling\+Param\+File = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_aca7d618f0d4ffe3edb9c72ce28839e4f}{}\label{class_p_c_a_1_1_polymer_scaling_aca7d618f0d4ffe3edb9c72ce28839e4f} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!observable\+V\+Sscaling\+Steps\+With\+Statistics@{observable\+V\+Sscaling\+Steps\+With\+Statistics}}
+\index{observable\+V\+Sscaling\+Steps\+With\+Statistics@{observable\+V\+Sscaling\+Steps\+With\+Statistics}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{observable\+V\+Sscaling\+Steps\+With\+Statistics()}{observableVSscalingStepsWithStatistics()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::observable\+V\+Sscaling\+Steps\+With\+Statistics (\begin{DoxyParamCaption}\item[{\hyperlink{class_p_c_a_1_1_polymer_scaling_aa4112660455a10f29c208c96655718c0}{Polymer\+Scaling\+::\+Observable}}]{observable,  }\item[{char $\ast$}]{data\+File\+Name,  }\item[{int}]{statistics,  }\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{char $\ast$}]{result\+File,  }\item[{char $\ast$}]{conf\+File = {\ttfamily NULL},  }\item[{char $\ast$}]{num\+Monomers\+File = {\ttfamily NULL},  }\item[{char $\ast$}]{scaling\+Param\+File = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+. All blocks in statistics should be of the S\+A\+ME S\+I\+ZE. Data\+File\+Name -\/ name of the file with coordinates x, y, z. \hypertarget{class_p_c_a_1_1_polymer_scaling_a209214a658e1da7ccc0e520742cd1e3d}{}\label{class_p_c_a_1_1_polymer_scaling_a209214a658e1da7ccc0e520742cd1e3d} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!scaling@{scaling}}
+\index{scaling@{scaling}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{scaling()}{scaling()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::scaling (\begin{DoxyParamCaption}\item[{\hyperlink{class_p_c_a_1_1_polymer}{Polymer} $\ast$$\ast$}]{polymer,  }\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{\hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} $\ast$}]{newS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_a5286d41c8e899e596526fb936a5e2a9b}{}\label{class_p_c_a_1_1_polymer_scaling_a5286d41c8e899e596526fb936a5e2a9b} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!scaling\+Loop@{scaling\+Loop}}
+\index{scaling\+Loop@{scaling\+Loop}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{scaling\+Loop()}{scalingLoop()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::scaling\+Loop (\begin{DoxyParamCaption}\item[{\hyperlink{class_p_c_a_1_1_polymer}{Polymer} $\ast$$\ast$}]{polymer,  }\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{F\+I\+LE $\ast$}]{conf\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{num\+Monomers\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{scaling\+Param\+File = {\ttfamily NULL},  }\item[{int}]{loop\+Steps = {\ttfamily 100000} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_a02f133a0bfdf54a7677c8f9637a4238a}{}\label{class_p_c_a_1_1_polymer_scaling_a02f133a0bfdf54a7677c8f9637a4238a} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!set\+Verbose@{set\+Verbose}}
+\index{set\+Verbose@{set\+Verbose}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{set\+Verbose()}{setVerbose()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::set\+Verbose (\begin{DoxyParamCaption}\item[{double}]{verbose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_a5e0684790a3295de961dcc7b282c8c1f}{}\label{class_p_c_a_1_1_polymer_scaling_a5e0684790a3295de961dcc7b282c8c1f} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!total\+Angle\+V\+Saverage\+Monomers\+Length@{total\+Angle\+V\+Saverage\+Monomers\+Length}}
+\index{total\+Angle\+V\+Saverage\+Monomers\+Length@{total\+Angle\+V\+Saverage\+Monomers\+Length}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{total\+Angle\+V\+Saverage\+Monomers\+Length()}{totalAngleVSaverageMonomersLength()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::total\+Angle\+V\+Saverage\+Monomers\+Length (\begin{DoxyParamCaption}\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{F\+I\+LE $\ast$}]{result\+File,  }\item[{F\+I\+LE $\ast$}]{conf\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{num\+Monomers\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{scaling\+Param\+File = {\ttfamily NULL},  }\item[{int}]{loop\+Steps = {\ttfamily 100000} }\end{DoxyParamCaption})}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_a6c1fbca75891e468b75ac482347232df}{}\label{class_p_c_a_1_1_polymer_scaling_a6c1fbca75891e468b75ac482347232df} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!total\+Angle\+V\+Sintegral\+Monomers\+Length@{total\+Angle\+V\+Sintegral\+Monomers\+Length}}
+\index{total\+Angle\+V\+Sintegral\+Monomers\+Length@{total\+Angle\+V\+Sintegral\+Monomers\+Length}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{total\+Angle\+V\+Sintegral\+Monomers\+Length()}{totalAngleVSintegralMonomersLength()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::total\+Angle\+V\+Sintegral\+Monomers\+Length (\begin{DoxyParamCaption}\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{F\+I\+LE $\ast$}]{result\+File,  }\item[{F\+I\+LE $\ast$}]{conf\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{num\+Monomers\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{scaling\+Param\+File = {\ttfamily NULL},  }\item[{int}]{loop\+Steps = {\ttfamily 100000} }\end{DoxyParamCaption})}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_aec67d14d95d0482dc7dc08155abb0609}{}\label{class_p_c_a_1_1_polymer_scaling_aec67d14d95d0482dc7dc08155abb0609} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!write\+Map\+Dot\+Product\+Video@{write\+Map\+Dot\+Product\+Video}}
+\index{write\+Map\+Dot\+Product\+Video@{write\+Map\+Dot\+Product\+Video}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{write\+Map\+Dot\+Product\+Video()}{writeMapDotProductVideo()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::write\+Map\+Dot\+Product\+Video (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name,  }\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{F\+I\+LE $\ast$}]{conf\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{num\+Monomers\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{scaling\+Param\+File = {\ttfamily NULL},  }\item[{int}]{each\+Step = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\hypertarget{class_p_c_a_1_1_polymer_scaling_a9ef7952c6b05b0614b81752f82f614a4}{}\label{class_p_c_a_1_1_polymer_scaling_a9ef7952c6b05b0614b81752f82f614a4} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!write\+Map\+End\+To\+End\+Video@{write\+Map\+End\+To\+End\+Video}}
+\index{write\+Map\+End\+To\+End\+Video@{write\+Map\+End\+To\+End\+Video}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{write\+Map\+End\+To\+End\+Video()}{writeMapEndToEndVideo()}}
+{\footnotesize\ttfamily void P\+C\+A\+::\+Polymer\+Scaling\+::write\+Map\+End\+To\+End\+Video (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name,  }\item[{const \hyperlink{class_p_c_a_1_1_polymer_scaling_1_1_scaling_param}{Scaling\+Param} \&}]{etalonS,  }\item[{F\+I\+LE $\ast$}]{conf\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{num\+Monomers\+File = {\ttfamily NULL},  }\item[{F\+I\+LE $\ast$}]{scaling\+Param\+File = {\ttfamily NULL},  }\item[{int}]{each\+Step = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_p_c_a_1_1_polymer_scaling_ade3a687fb33d7c74e78b38d3aca3a1ab}{}\label{class_p_c_a_1_1_polymer_scaling_ade3a687fb33d7c74e78b38d3aca3a1ab} 
+\index{P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}!verbose@{verbose}}
+\index{verbose@{verbose}!P\+C\+A\+::\+Polymer\+Scaling@{P\+C\+A\+::\+Polymer\+Scaling}}
+\subsubsection{\texorpdfstring{verbose}{verbose}}
+{\footnotesize\ttfamily bool P\+C\+A\+::\+Polymer\+Scaling\+::verbose = true\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+If false then this class is not allowed to print anything on screen. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/annsi118/\+Documents/\+Git\+\_\+projects/\+P\+C\+A/include/\hyperlink{_polymer_scaling_8h}{Polymer\+Scaling.\+h}\item 
+/\+Users/annsi118/\+Documents/\+Git\+\_\+projects/\+P\+C\+A/src/\hyperlink{_polymer_scaling_8cpp}{Polymer\+Scaling.\+cpp}\end{DoxyCompactItemize}
