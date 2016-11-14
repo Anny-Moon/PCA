@@ -39,7 +39,6 @@ int main(int np, char **p)
     
     char resultFile[100];
     
-    
     char confFile[100];
     sprintf(confFile,"results/%s_configurartions.dat",p[1]);
     
@@ -99,9 +98,9 @@ int main(int np, char **p)
 	printf("------------------------\n");
 	
 	Polymer polymer(str,0,1);
-    polymer.setMonomerLengthsFromRadiusVectors();
-    tmp = PolymerScaling::findCriticalScalingParam(polymer.getNumMonomers());
-    PolymerScaling::ScalingParam sp(tmp);
+	polymer.setMonomerLengthsFromRadiusVectors();
+	tmp = PolymerScaling::findCriticalScalingParam(polymer.getNumMonomers());
+	PolymerScaling::ScalingParam sp(tmp);
     
 	
 	sprintf(resultFile,"results/%s_scalingParamVSsteps.dat",p[1]); //name of output file with total angle
@@ -114,7 +113,7 @@ int main(int np, char **p)
 	    numMonomersFile,
 	    NULL
 	);
-	}
+    }
 
 printf("Everything is OK!\n");
 return 0;

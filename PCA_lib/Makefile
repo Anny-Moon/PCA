@@ -88,3 +88,6 @@ print:
 #	@echo $(LDLIBS)
 	@echo $(SRC)
 #	@echo $(addprefix ./object/, $(notdir $(patsubst %.cpp, %.o, $(SRC))))
+
+love:
+	@echo "not war?"
