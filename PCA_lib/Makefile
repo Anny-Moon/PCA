@@ -1,6 +1,6 @@
 # 
 # Run $make list_of_objects to see
-# the rule for compilation only onle file.
+# the rule for compilation only one file.
 #
 # Anna Sinelnikova
 # Uppsala, Sweden 2016
@@ -36,7 +36,8 @@ OBJ_DIR:= ./build
 #---------------------No need to change the following!-------------------
 
 # Include files are needed fot Includes
-INC_FILES :=  $(wildcard $(INC_DIR)/*.h) $(wildcard $(INC_DIR)/*/*.h) $(wildcard $(INC_DIR)/*/*/*.h)
+INC_FILES:=  $(foreach inc_dir, $(INC_DIR), $(wildcard $(inc_dir)/*h))
+INC_FILES += $(foreach inc_dir, $(INC_DIR), $(wildcard $(inc_dir)/*/*h))
 
 # All include directories are needed for Includes
 INC_DIRS:= $(dir $(INC_FILES))
@@ -57,7 +58,7 @@ all: $(STATIC_LIB)
 
 # Linking
 $(STATIC_LIB): $(OBJ)
-	@echo "Generating executable file..." $(notdir $(STATIC_LIB))
+	@echo "Generating static library..." $(notdir $(STATIC_LIB))
 #	@$(CC) $(CFLAGS) $(OPT)  $(OBJ) -o $(PROGRAM) $(LIB)
 	@ar rcs $(STATIC_LIB) $(OBJ) 
 

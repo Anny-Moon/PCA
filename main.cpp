@@ -4,6 +4,7 @@
 #include "File.h"
 #include "Polymer.h"
 #include "PolymerScaling.h"
+#include "Logo.h"
 
 using namespace PCA;
 
@@ -12,6 +13,8 @@ int main(int np, char **p)
     double tmp;
     char str [100];
     bool currentVerbose;
+    
+    Logo::print();
     
     if(p[1]==NULL){
 	printf("------------------------\n");
