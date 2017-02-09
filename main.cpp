@@ -43,7 +43,7 @@ int main(int np, char **p)
     char resultFile[100];
     
     char confFile[100];
-    sprintf(confFile,"results/%s_configurartions.dat",p[1]);
+    sprintf(confFile,"results/%s_configurations.dat",p[1]);
     
     char numMonomersFile[100];
     sprintf(numMonomersFile,"results/%s_numMonomers.dat",p[1]);
