@@ -1,7 +1,8 @@
 function [] = showConfiguration(polymerName, step)
 
-%polymerName  = '5dn7'
-%step = 0;
+if nargin < 2
+    step =0;
+end
 
 fileName = sprintf('../results/%s_configurations.dat',polymerName);
 
