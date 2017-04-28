@@ -68,13 +68,13 @@ for i=2:N{k}-1
     axis on;
     axis equal; 
     view([45, -45, 45]);
-    h1=line([B{k}(i,1) B{k}(i+1,1)],[B{k}(i,2) B{k}(i+1,2)],[B{k}(i,3) B{k}(i+1,3)],'LineStyle','-','LineWidth',3,'Color',[linkColorR linkColorG linkColorG]);    
+    h1=line([B{k}(i,1) B{k}(i+1,1)],[B{k}(i,2) B{k}(i+1,2)],[B{k}(i,3) B{k}(i+1,3)],'LineStyle','-','LineWidth',3,'Color',[linkColorR linkColorG linkColorB]);    
     h2=stem3(B{k}(i,1),B{k}(i,2),B{k}(i,3),'LineStyle','none','Marker','o', 'MarkerFaceColor',[atomColorR atomColorG atomColorB],'MarkerEdgeColor', [0 0 0],'MarkerSize',10);
     hold on;
 end
 axis equal; 
-line([B{k}(1,1) B{k}(2,1)],[B{k}(1,2) B{k}(2,2)],[B{k}(1,3) B{k}(2,3)],'LineStyle','-','LineWidth',3,'Color',[linkColorR linkColorG linkColorG]);
-line([B{k}(2,1) B{k}(3,1)],[B{k}(2,2) B{k}(3,2)],[B{k}(2,3) B{k}(3,3)],'LineStyle','-','LineWidth',3,'Color',[linkColorR linkColorG linkColorG]);
+line([B{k}(1,1) B{k}(2,1)],[B{k}(1,2) B{k}(2,2)],[B{k}(1,3) B{k}(2,3)],'LineStyle','-','LineWidth',3,'Color',[linkColorR linkColorG linkColorB]);
+line([B{k}(2,1) B{k}(3,1)],[B{k}(2,2) B{k}(3,2)],[B{k}(2,3) B{k}(3,3)],'LineStyle','-','LineWidth',3,'Color',[linkColorR linkColorG linkColorB]);
 
 clear
 end %end of function
