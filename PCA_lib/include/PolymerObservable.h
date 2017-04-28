@@ -31,7 +31,7 @@ public:
     * \theta = \frac{1}{N\sqrt {N}} \sum_{i,j}^N
     * \frac{(\vec{t}_i\cdot \vec{t}_j)}{\vert\vec{t}_i\vert\vert\vec{t}_j\vert}
     * \f] where N is number of monomers.*/
-    static double totalAngle(const Polymer& polymer);
+    static double totalAngle(const Polymer& polymer, int shift = 1);
     
 };
 }//end of namespace PCA

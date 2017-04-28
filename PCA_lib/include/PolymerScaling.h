@@ -97,7 +97,8 @@ public:
 	char* resultFile,
 	char* confFile=NULL,
 	char* numMonomersFile=NULL,
-	char* scalingParamFile=NULL
+	char* scalingParamFile=NULL,
+	int shiftForObservable = 1
     );
     
     void totalAngleVSaverageMonomersLength(

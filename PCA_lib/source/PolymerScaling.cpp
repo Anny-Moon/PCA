@@ -355,7 +355,7 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
 	    PolymerScaling::Observable observable,
 	    char* dataFileName, int statistics,
 	    const ScalingParam& etalonS, char* resultFile,
-	    char* confFile, char* numMonomersFile, char* scalingParamFile)
+	    char* confFile, char* numMonomersFile, char* scalingParamFile, int shiftForObservable)
 {
     int i,k;
     int numMonomers;
@@ -425,7 +425,7 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
 		    answ[i] = newS.s;
 		    break;
 		case PolymerScaling::Observable::totalAngle:
-		    answ[i] = PolymerObservable::totalAngle(*polymer[i]);
+		    answ[i] = PolymerObservable::totalAngle(*polymer[i], shiftForObservable);
 		    break;
 		case PolymerScaling::Observable::radiusOfGyration:
 		    polymer[i]->setRadiusVectorsFromVectorsT();

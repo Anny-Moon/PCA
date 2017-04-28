@@ -28,7 +28,7 @@ double PolymerObservable::radiusOfGyration(const Polymer& polymer)
 }
 
 
-double PolymerObservable::totalAngle(const Polymer& polymer)
+double PolymerObservable::totalAngle(const Polymer& polymer, int shift)
 {
     int i,j;
     double answ=0.0;
@@ -39,11 +39,11 @@ double PolymerObservable::totalAngle(const Polymer& polymer)
     int numMonomers = polymer.getNumMonomers();
     
     for(i=0;i<numMonomers;i++)
-	for(j=i+1;j<numMonomers;j++)
+	for(j=i+shift;j<numMonomers;j++)
 	    answ += Vector::dotProduct(t[i],t[j]) / (t[i].norm() * t[j].norm());
     
-    //return answ/(double)numMonomers;
-    return answ/pow((double)numMonomers,1.5);
+    return answ;
+//    return answ/pow((double)numMonomers,1.5);
 }
 
 }//end of namespace
