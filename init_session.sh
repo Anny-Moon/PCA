@@ -5,7 +5,6 @@
 PROJECT_DIR=$PWD
 INC_DIR=$PWD/PCA_lib/include
 BUILD_DIR=$PWD/PCA_lib/build
-DATA_DIR=$PWD/data
 
 #################
 # Include paths #
@@ -28,18 +27,6 @@ else
     LIBRARY_PATH+=:${BUILD_DIR};
 fi
 export LIBRARY_PATH
-
-#########################
-# Paths to data#
-#########################
-if [ -z "$DATA_PATH" ]
-then
-    DATA_PATH=${DATA_DIR};
-else
-    DATA_PATH+=:${DATA_DIR};
-fi
-export DATA_PATH
-
 
 printf "Initialization session completed.\n"
 printf "You had to call 'source init_session.sh'\n"
