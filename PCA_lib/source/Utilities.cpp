@@ -42,7 +42,7 @@ double meanValue(int size, const double* values)
     return av;
 }
 
-double standartDeviation(int size, const double* values)
+double standardDeviation(int size, const double* values)
 {   int i;
     double av, sigma;
     sigma = 0.0;

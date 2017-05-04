@@ -34,7 +34,7 @@ extern bool globalVerbose;///< if false nobody can print on screen. Exseptions: 
 
 ///@{@name Statistics:
 double meanValue(int size, const double* values);
-double standartDeviation(int size, const double* values);
+double standardDeviation(int size, const double* values);
 ///@}
 
 ///@{@name Work with arrays of doubles

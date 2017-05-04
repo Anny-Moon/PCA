@@ -455,7 +455,7 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
 	}
 	
 	mean = PCA::meanValue(statistics, answ);
-	error = PCA::standartDeviation(statistics, answ);
+	error = PCA::standardDeviation(statistics, answ);
 	fprintf(resultFp,"%i\t%.14le\t%.14le\n", k, mean, error);
 
 	if(confFp != NULL){

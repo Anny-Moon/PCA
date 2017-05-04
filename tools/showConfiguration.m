@@ -62,8 +62,9 @@ for i=1:blockNum
 end
 fclose(fp);
 
+set(gcf, 'color','white');
 axis equal;
-axis on;
+axis off;
 
 % color scheme
 linkColorR = rand;
@@ -79,7 +80,7 @@ k = step+1;
 fprintf('Number of monomers: %d\n',N{k});
 
 for i=2:N{k}-1
-    axis on;
+    axis off;
     axis equal; 
     view([45, -45, 45]);
     h1=line([B{k}(i,1) B{k}(i+1,1)],[B{k}(i,2) B{k}(i+1,2)],[B{k}(i,3) B{k}(i+1,3)],'LineStyle','-','LineWidth',3,'Color',[linkColorR linkColorG linkColorB]);    
