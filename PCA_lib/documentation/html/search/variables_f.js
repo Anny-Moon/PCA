@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['prevlineisempty',['prevLineIsEmpty',['../scaling_movie_8m.html#a882379b2f89dbadba2fb6d2857c0e707',1,'prevLineIsEmpty():&#160;scalingMovie.m'],['../scaling_movie__new_8m.html#a078be7184802d1f07838d6a1f14b8d3f',1,'prevLineIsEmpty():&#160;scalingMovie_new.m'],['../scaling_picture_8m.html#a078be7184802d1f07838d6a1f14b8d3f',1,'prevLineIsEmpty():&#160;scalingPicture.m'],['../scaling_picture__new_8m.html#a078be7184802d1f07838d6a1f14b8d3f',1,'prevLineIsEmpty():&#160;scalingPicture_new.m']]],
-  ['proteinname',['proteinName',['../map_dot_product_8m.html#a52fcb44dc57d4ff7fbd78e4d83b17506',1,'proteinName():&#160;mapDotProduct.m'],['../map_dot_product_movie_8m.html#a52fcb44dc57d4ff7fbd78e4d83b17506',1,'proteinName():&#160;mapDotProductMovie.m'],['../map_end_to_end_8m.html#a52fcb44dc57d4ff7fbd78e4d83b17506',1,'proteinName():&#160;mapEndToEnd.m'],['../map_end_to_end_movie_8m.html#a52fcb44dc57d4ff7fbd78e4d83b17506',1,'proteinName():&#160;mapEndToEndMovie.m']]],
-  ['purpleb',['purpleB',['../color_map_8m.html#a91db321c094d5ab1e734393edfa3f69b',1,'purpleB():&#160;colorMap.m'],['../color_map1_8m.html#a91db321c094d5ab1e734393edfa3f69b',1,'purpleB():&#160;colorMap1.m']]],
-  ['purpleg',['purpleG',['../color_map_8m.html#aefca18163ad356c96ff04520520f61f9',1,'purpleG():&#160;colorMap.m'],['../color_map1_8m.html#aefca18163ad356c96ff04520520f61f9',1,'purpleG():&#160;colorMap1.m']]],
-  ['purpler',['purpleR',['../color_map_8m.html#a1ab7172aa4f04c967a6b2dbc5da1673b',1,'purpleR():&#160;colorMap.m'],['../color_map1_8m.html#a1ab7172aa4f04c967a6b2dbc5da1673b',1,'purpleR():&#160;colorMap1.m']]]
+  ['z',['z',['../class_p_c_a_1_1_vector.html#a715bde094c7e430c9c39769f6790b835',1,'PCA::Vector']]],
+  ['zero',['zero',['../class_p_c_a_1_1_vector.html#a72264553beba4bb7c7a3cea65d4bbd4f',1,'PCA::Vector']]]
 ];

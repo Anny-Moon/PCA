@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['k',['k',['../map_dot_product_movie_8m.html#af37276f15d333b0ba4bf3487cdae4c0d',1,'k():&#160;mapDotProductMovie.m'],['../map_end_to_end_movie_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac',1,'k():&#160;mapEndToEndMovie.m'],['../scaling_movie_8m.html#a1c73327b2882639bc9f5e416bb3cc7ac',1,'k():&#160;scalingMovie.m'],['../scaling_picture_8m.html#adc468c70fb574ebd07287b38d0d0676d',1,'k():&#160;scalingPicture.m'],['../scaling_picture__new_8m.html#af37276f15d333b0ba4bf3487cdae4c0d',1,'k():&#160;scalingPicture_new.m']]],
-  ['kadanofftransformation',['KadanoffTransformation',['../class_p_c_a_1_1_vector.html#a385f07b1056ab2a7648b0b9dd03cd8b0',1,'PCA::Vector']]],
-  ['kappa',['kappa',['../class_p_c_a_1_1_polymer.html#a1bef29f1613bb4b67981aae7df3d804b',1,'PCA::Polymer']]]
+  ['norm',['norm',['../class_p_c_a_1_1_vector.html#a709eef286197f64e45f35fce0925ddf0',1,'PCA::Vector']]],
+  ['numerator',['numerator',['../class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html#a44e1207125e0e834313769714699b701',1,'PCA::PolymerScaling::ScalingParam']]],
+  ['nummonomers',['numMonomers',['../class_p_c_a_1_1_polymer.html#a8dadd2d6d6d65b79909f274acd63fd1e',1,'PCA::Polymer']]]
 ];

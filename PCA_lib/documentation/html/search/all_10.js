@@ -1,25 +1,7 @@
 var searchData=
 [
-  ['pca',['PCA',['../md___users_annsi118__documents__git_projects__p_c_a__r_e_a_d_m_e.html',1,'']]],
-  ['pause',['pause',['../map_end_to_end_movie_8m.html#af5e7b6b3888b7ff1427978d360412fe7',1,'mapEndToEndMovie.m']]],
-  ['pca',['PCA',['../namespace_p_c_a.html',1,'']]],
-  ['pca_5fnumerical_5ferror',['PCA_NUMERICAL_ERROR',['../_p_c_amacros_8h.html#a5540d8f4800a06513afaa6709d6e0578',1,'PCAmacros.h']]],
-  ['pca_5fpi',['PCA_PI',['../_p_c_amacros_8h.html#a25ee12097a6dd0c586be1dc680326241',1,'PCAmacros.h']]],
-  ['pcamacros_2eh',['PCAmacros.h',['../_p_c_amacros_8h.html',1,'']]],
-  ['polymer',['Polymer',['../class_p_c_a_1_1_polymer.html',1,'PCA']]],
-  ['polymer',['Polymer',['../class_p_c_a_1_1_polymer.html#a0553d45df48e7f0995063e9e74fcadb5',1,'PCA::Polymer::Polymer(char *fileWithCoordinates, int numberOfSites=0, int polymerNumber=1)'],['../class_p_c_a_1_1_polymer.html#ac2645c33eba98a8ec1670d69b92060c8',1,'PCA::Polymer::Polymer(int numberOfMonomers, const Vector *r=NULL, const Vector *t=NULL, const Vector *b=NULL)'],['../class_p_c_a_1_1_polymer.html#a1ce99540db06e9e48392423ba516cd2f',1,'PCA::Polymer::Polymer(const Polymer &amp;polymer)']]],
-  ['polymer_2ecpp',['Polymer.cpp',['../_polymer_8cpp.html',1,'']]],
-  ['polymer_2eh',['Polymer.h',['../_polymer_8h.html',1,'']]],
-  ['polymerobservable',['PolymerObservable',['../class_p_c_a_1_1_polymer_observable.html',1,'PCA']]],
-  ['polymerobservable_2ecpp',['PolymerObservable.cpp',['../_polymer_observable_8cpp.html',1,'']]],
-  ['polymerobservable_2eh',['PolymerObservable.h',['../_polymer_observable_8h.html',1,'']]],
-  ['polymerscaling',['PolymerScaling',['../class_p_c_a_1_1_polymer_scaling.html',1,'PCA']]],
-  ['polymerscaling_2ecpp',['PolymerScaling.cpp',['../_polymer_scaling_8cpp.html',1,'']]],
-  ['polymerscaling_2eh',['PolymerScaling.h',['../_polymer_scaling_8h.html',1,'']]],
-  ['prevlineisempty',['prevLineIsEmpty',['../scaling_movie_8m.html#a882379b2f89dbadba2fb6d2857c0e707',1,'prevLineIsEmpty():&#160;scalingMovie.m'],['../scaling_movie__new_8m.html#a078be7184802d1f07838d6a1f14b8d3f',1,'prevLineIsEmpty():&#160;scalingMovie_new.m'],['../scaling_picture_8m.html#a078be7184802d1f07838d6a1f14b8d3f',1,'prevLineIsEmpty():&#160;scalingPicture.m'],['../scaling_picture__new_8m.html#a078be7184802d1f07838d6a1f14b8d3f',1,'prevLineIsEmpty():&#160;scalingPicture_new.m']]],
-  ['print',['print',['../class_p_c_a_1_1_vector.html#a6411d63770d6d711c5c854e21ca1776e',1,'PCA::Vector::print()'],['../map_end_to_end_8m.html#ac2aedf948531e1f99ae7f941329263e5',1,'print():&#160;mapEndToEnd.m']]],
-  ['proteinname',['proteinName',['../map_dot_product_8m.html#a52fcb44dc57d4ff7fbd78e4d83b17506',1,'proteinName():&#160;mapDotProduct.m'],['../map_dot_product_movie_8m.html#a52fcb44dc57d4ff7fbd78e4d83b17506',1,'proteinName():&#160;mapDotProductMovie.m'],['../map_end_to_end_8m.html#a52fcb44dc57d4ff7fbd78e4d83b17506',1,'proteinName():&#160;mapEndToEnd.m'],['../map_end_to_end_movie_8m.html#a52fcb44dc57d4ff7fbd78e4d83b17506',1,'proteinName():&#160;mapEndToEndMovie.m']]],
-  ['purpleb',['purpleB',['../color_map_8m.html#a91db321c094d5ab1e734393edfa3f69b',1,'purpleB():&#160;colorMap.m'],['../color_map1_8m.html#a91db321c094d5ab1e734393edfa3f69b',1,'purpleB():&#160;colorMap1.m']]],
-  ['purpleg',['purpleG',['../color_map_8m.html#aefca18163ad356c96ff04520520f61f9',1,'purpleG():&#160;colorMap.m'],['../color_map1_8m.html#aefca18163ad356c96ff04520520f61f9',1,'purpleG():&#160;colorMap1.m']]],
-  ['purpler',['purpleR',['../color_map_8m.html#a1ab7172aa4f04c967a6b2dbc5da1673b',1,'purpleR():&#160;colorMap.m'],['../color_map1_8m.html#a1ab7172aa4f04c967a6b2dbc5da1673b',1,'purpleR():&#160;colorMap1.m']]]
+  ['t',['t',['../class_p_c_a_1_1_polymer.html#a0fd79e19a8c09a9e4c72903924151b5e',1,'PCA::Polymer']]],
+  ['totalangle',['totalAngle',['../class_p_c_a_1_1_polymer_observable.html#a849269d1040aaba9a0d6ca8a4c510ca9',1,'PCA::PolymerObservable::totalAngle()'],['../class_p_c_a_1_1_polymer_scaling.html#aa4112660455a10f29c208c96655718c0a1aa2ef7ad0fe7fe833729f2241ba944e',1,'PCA::PolymerScaling::totalAngle()']]],
+  ['totalanglevsaveragemonomerslength',['totalAngleVSaverageMonomersLength',['../class_p_c_a_1_1_polymer_scaling.html#a5e0684790a3295de961dcc7b282c8c1f',1,'PCA::PolymerScaling']]],
+  ['totalanglevsintegralmonomerslength',['totalAngleVSintegralMonomersLength',['../class_p_c_a_1_1_polymer_scaling.html#a6c1fbca75891e468b75ac482347232df',1,'PCA::PolymerScaling']]]
 ];

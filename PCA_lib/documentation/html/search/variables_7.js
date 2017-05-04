@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['h1',['h1',['../scaling_movie_8m.html#a8ea5b47bab50be05608c883cc49a3f75',1,'h1():&#160;scalingMovie.m'],['../scaling_movie__new_8m.html#a8ea5b47bab50be05608c883cc49a3f75',1,'h1():&#160;scalingMovie_new.m'],['../scaling_picture_8m.html#a8ea5b47bab50be05608c883cc49a3f75',1,'h1():&#160;scalingPicture.m'],['../scaling_picture__new_8m.html#a8ea5b47bab50be05608c883cc49a3f75',1,'h1():&#160;scalingPicture_new.m']]],
-  ['h2',['h2',['../scaling_movie_8m.html#ac9e7e0722796a9a2748cfe71e5c1eacb',1,'h2():&#160;scalingMovie.m'],['../scaling_movie__new_8m.html#ac9e7e0722796a9a2748cfe71e5c1eacb',1,'h2():&#160;scalingMovie_new.m'],['../scaling_picture_8m.html#ac9e7e0722796a9a2748cfe71e5c1eacb',1,'h2():&#160;scalingPicture.m'],['../scaling_picture__new_8m.html#ac9e7e0722796a9a2748cfe71e5c1eacb',1,'h2():&#160;scalingPicture_new.m']]],
-  ['height',['Height',['../map_dot_product_movie_8m.html#aa2c50af48fac04399f716eef82b3cd18',1,'Height():&#160;mapDotProductMovie.m'],['../map_end_to_end_movie_8m.html#aa2c50af48fac04399f716eef82b3cd18',1,'Height():&#160;mapEndToEndMovie.m'],['../scaling_movie_8m.html#aa2c50af48fac04399f716eef82b3cd18',1,'Height():&#160;scalingMovie.m'],['../scaling_movie__new_8m.html#aa2c50af48fac04399f716eef82b3cd18',1,'Height():&#160;scalingMovie_new.m']]]
+  ['numerator',['numerator',['../class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html#a44e1207125e0e834313769714699b701',1,'PCA::PolymerScaling::ScalingParam']]],
+  ['nummonomers',['numMonomers',['../class_p_c_a_1_1_polymer.html#a8dadd2d6d6d65b79909f274acd63fd1e',1,'PCA::Polymer']]]
 ];

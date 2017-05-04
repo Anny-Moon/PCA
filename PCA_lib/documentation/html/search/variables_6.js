@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['globalverbose',['globalVerbose',['../namespace_p_c_a.html#a01cf2b18a2d7669f5be721c2142bf67d',1,'PCA']]]
+  ['monomerlength',['monomerLength',['../class_p_c_a_1_1_polymer.html#adec33c5274834c85479abefe537efa5a',1,'PCA::Polymer']]]
 ];

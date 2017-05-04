@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PCA: /Users/annsi118/Documents/Git_projects/PCA/include/PCAmacros.h File Reference</title>
+<title>Polymer Chain Analyzer: /Users/annsi118/Documents/Git_projects/PCA/PCA_lib/include/PCAmacros.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,8 +27,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PCA
+   <div id="projectname">Polymer Chain Analyzer
    </div>
+   <div id="projectbrief">Toolkit for geometrical analyzation polymer chains</div>
   </td>
  </tr>
  </tbody>
@@ -87,12 +88,14 @@ Macros</h2></td></tr>
 <tr class="separator:a25ee12097a6dd0c586be1dc680326241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1443445dffced41c9dfd07bc3f0ad7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_amacros_8h.html#ae1443445dffced41c9dfd07bc3f0ad7f">_PCA_CATCH_VOID_POINTER</a>(pointer,  functionName)</td></tr>
 <tr class="separator:ae1443445dffced41c9dfd07bc3f0ad7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad13d92940fe21eee8513993f5eb98971"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_amacros_8h.html#ad13d92940fe21eee8513993f5eb98971">_PCA_CATCH_FILE_ERROR</a>(<a class="el" href="scaling_picture__new_8m.html#a883a1b899b644be7fc6d704c1d8e0c04">fp</a>,  action,  <a class="el" href="map_end_to_end_movie_8m.html#acbece2625a541230e9f9091adca38c8c">fileName</a>,  functionName)</td></tr>
+<tr class="memitem:ad13d92940fe21eee8513993f5eb98971"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_amacros_8h.html#ad13d92940fe21eee8513993f5eb98971">_PCA_CATCH_FILE_ERROR</a>(fp,  action,  fileName,  functionName)</td></tr>
 <tr class="separator:ad13d92940fe21eee8513993f5eb98971"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5540d8f4800a06513afaa6709d6e0578"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_amacros_8h.html#a5540d8f4800a06513afaa6709d6e0578">PCA_NUMERICAL_ERROR</a>&#160;&#160;&#160;3.0*fabs(atan(1.0)-<a class="el" href="_p_c_amacros_8h.html#a25ee12097a6dd0c586be1dc680326241">PCA_PI</a>/4.0)</td></tr>
 <tr class="separator:a5540d8f4800a06513afaa6709d6e0578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6b6551a8dd59b4b83fa2ce4b85bd27d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_amacros_8h.html#ae6b6551a8dd59b4b83fa2ce4b85bd27d">_PCA_IS_EQUAL</a>(a,  b)&#160;&#160;&#160;fabs(a-b)&lt;<a class="el" href="_p_c_amacros_8h.html#a5540d8f4800a06513afaa6709d6e0578">PCA_NUMERICAL_ERROR</a></td></tr>
 <tr class="separator:ae6b6551a8dd59b4b83fa2ce4b85bd27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e3769b6c63df427af5d995921b9c00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_c_amacros_8h.html#a61e3769b6c63df427af5d995921b9c00">_PCA_CHECK_BLOCKS_SIZE_IN_FILE</a>(str)</td></tr>
+<tr class="separator:a61e3769b6c63df427af5d995921b9c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ad13d92940fe21eee8513993f5eb98971"></a>
@@ -105,7 +108,7 @@ Macros</h2></td></tr>
           <td class="memname">#define _PCA_CATCH_FILE_ERROR</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="scaling_picture__new_8m.html#a883a1b899b644be7fc6d704c1d8e0c04">fp</a>, </td>
+          <td class="paramname">fp, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -117,7 +120,7 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><a class="el" href="map_end_to_end_movie_8m.html#acbece2625a541230e9f9091adca38c8c">fileName</a>, </td>
+          <td class="paramname">fileName, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -132,9 +135,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>(<a class="code" href="map_dot_product_8m.html#a883a1b899b644be7fc6d704c1d8e0c04">fp</a>==NULL){\</div><div class="line">    printf(<span class="stringliteral">&quot;Error: cannot \%s file &#39;%s&#39;\n\tin &quot;</span>, action, <a class="code" href="map_dot_product_movie_8m.html#acbece2625a541230e9f9091adca38c8c">fileName</a>);\</div><div class="line">    printf(functionName);\</div><div class="line">    printf(<span class="stringliteral">&quot;\n&quot;</span>);\</div><div class="line">    exit(1);\</div><div class="line">    }</div><div class="ttc" id="map_dot_product_movie_8m_html_acbece2625a541230e9f9091adca38c8c"><div class="ttname"><a href="map_dot_product_movie_8m.html#acbece2625a541230e9f9091adca38c8c">fileName</a></div><div class="ttdeci">fileName</div><div class="ttdef"><b>Definition:</b> mapDotProductMovie.m:18</div></div>
-<div class="ttc" id="map_dot_product_8m_html_a883a1b899b644be7fc6d704c1d8e0c04"><div class="ttname"><a href="map_dot_product_8m.html#a883a1b899b644be7fc6d704c1d8e0c04">fp</a></div><div class="ttdeci">fp</div><div class="ttdef"><b>Definition:</b> mapDotProduct.m:8</div></div>
-</div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>(fp==NULL){\</div><div class="line">    printf(<span class="stringliteral">&quot;Error: cannot \%s file &#39;%s&#39;\n\tin &quot;</span>, action, fileName);\</div><div class="line">    printf(functionName);\</div><div class="line">    printf(<span class="stringliteral">&quot;\n&quot;</span>);\</div><div class="line">    exit(1);\</div><div class="line">    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ae1443445dffced41c9dfd07bc3f0ad7f"></a>
@@ -163,6 +164,24 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>(pointer==NULL){\</div><div class="line">    printf(<span class="stringliteral">&quot;Error: void pointer\n\tin &quot;</span>);\</div><div class="line">    printf(functionName);\</div><div class="line">    printf(<span class="stringliteral">&quot;\n&quot;</span>);\</div><div class="line">    exit(1);\</div><div class="line">    }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a61e3769b6c63df427af5d995921b9c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61e3769b6c63df427af5d995921b9c00">&sect;&nbsp;</a></span>_PCA_CHECK_BLOCKS_SIZE_IN_FILE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _PCA_CHECK_BLOCKS_SIZE_IN_FILE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>(!File::checkAllBlocksHaveTheSameSize(str)){\</div><div class="line">    printf(<span class="stringliteral">&quot;Error in data file:\n&quot;</span>);\</div><div class="line">    printf(<span class="stringliteral">&quot;All the chains in your file should be of the same size. &quot;</span>);\</div><div class="line">    printf(<span class="stringliteral">&quot;But it is not the case.\nLook:\n&quot;</span>);\</div><div class="line">    File::showNumberOfLinesInBlocks(str);\</div><div class="line">    exit(1);\</div><div class="line">    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ae6b6551a8dd59b4b83fa2ce4b85bd27d"></a>

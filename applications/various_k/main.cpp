@@ -25,8 +25,8 @@ int main(int np, char **p)
 	printf("For example: ./pca 5dn7\n");
 	printf("I will calculate total angle VS number of scaling step.\n");
 	printf("------------------------\n");
-	printf("If you have more than one chain (which should be separated ");
-	printf("with one ore more empty lines) in that file, then I will take all of them ");
+	printf("If you have more than one chain (which should be separated \n");
+	printf("with one ore more empty lines) in that file, then I will take all of them \n");
 	printf("for the statistics. All chains should have same number of sites in this case.\n");
 	printf("------------------------\n");
 	printf("\n");

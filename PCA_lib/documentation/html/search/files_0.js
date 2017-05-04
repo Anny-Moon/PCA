@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['colormap_2em',['colorMap.m',['../color_map_8m.html',1,'']]],
-  ['colormap1_2em',['colorMap1.m',['../color_map1_8m.html',1,'']]],
-  ['colormap2_2em',['colorMap2.m',['../color_map2_8m.html',1,'']]]
+  ['datahandler_2ecpp',['DataHandler.cpp',['../_data_handler_8cpp.html',1,'']]],
+  ['datahandler_2eh',['DataHandler.h',['../_data_handler_8h.html',1,'']]]
 ];

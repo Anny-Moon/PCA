@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['denominator',['denominator',['../class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html#a379e56a2fc5fa7f2b96d213a6b23c065',1,'PCA::PolymerScaling::ScalingParam']]],
-  ['dotproduct',['dotProduct',['../class_p_c_a_1_1_vector.html#abc89550f2ef587f808a7fea91259a22a',1,'PCA::Vector']]]
+  ['ex',['eX',['../class_p_c_a_1_1_vector.html#a2583e534812667f9e5cd69f53569c86b',1,'PCA::Vector']]],
+  ['ey',['eY',['../class_p_c_a_1_1_vector.html#ac937f2d1b63ca297cfa3c6d1eac26e1e',1,'PCA::Vector']]],
+  ['ez',['eZ',['../class_p_c_a_1_1_vector.html#a33a36b16ca1a698b6a0e730222406287',1,'PCA::Vector']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PCA: PCA::PolymerScaling Class Reference</title>
+<title>Polymer Chain Analyzer: PCA::PolymerScaling Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,8 +27,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PCA
+   <div id="projectname">Polymer Chain Analyzer
    </div>
+   <div id="projectbrief">Toolkit for geometrical analyzation polymer chains</div>
   </td>
  </tr>
  </tbody>
@@ -105,9 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9910d5acf149b15e92a5c4ddaf8dd944"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a_1_1_polymer_scaling.html#a9910d5acf149b15e92a5c4ddaf8dd944">averageMonomersLengthVSscalingSteps</a> (const <a class="el" href="class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html">ScalingParam</a> &amp;etalonS, FILE *resultFile, FILE *confFile=NULL, FILE *numMonomersFile=NULL, FILE *scalingParamFile=NULL, int loopSteps=100000)</td></tr>
 <tr class="separator:a9910d5acf149b15e92a5c4ddaf8dd944"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Triangular maps:</div></td></tr>
-<tr class="memitem:a9ef7952c6b05b0614b81752f82f614a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a_1_1_polymer_scaling.html#a9ef7952c6b05b0614b81752f82f614a4">writeMapEndToEndVideo</a> (char *<a class="el" href="map_end_to_end_movie_8m.html#acbece2625a541230e9f9091adca38c8c">fileName</a>, const <a class="el" href="class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html">ScalingParam</a> &amp;etalonS, FILE *confFile=NULL, FILE *numMonomersFile=NULL, FILE *scalingParamFile=NULL, int eachStep=1)</td></tr>
+<tr class="memitem:a9ef7952c6b05b0614b81752f82f614a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a_1_1_polymer_scaling.html#a9ef7952c6b05b0614b81752f82f614a4">writeMapEndToEndVideo</a> (char *fileName, const <a class="el" href="class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html">ScalingParam</a> &amp;etalonS, FILE *confFile=NULL, FILE *numMonomersFile=NULL, FILE *scalingParamFile=NULL, int eachStep=1)</td></tr>
 <tr class="separator:a9ef7952c6b05b0614b81752f82f614a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec67d14d95d0482dc7dc08155abb0609"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a_1_1_polymer_scaling.html#aec67d14d95d0482dc7dc08155abb0609">writeMapDotProductVideo</a> (char *<a class="el" href="map_end_to_end_movie_8m.html#acbece2625a541230e9f9091adca38c8c">fileName</a>, const <a class="el" href="class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html">ScalingParam</a> &amp;etalonS, FILE *confFile=NULL, FILE *numMonomersFile=NULL, FILE *scalingParamFile=NULL, int eachStep=1)</td></tr>
+<tr class="memitem:aec67d14d95d0482dc7dc08155abb0609"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a_1_1_polymer_scaling.html#aec67d14d95d0482dc7dc08155abb0609">writeMapDotProductVideo</a> (char *fileName, const <a class="el" href="class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html">ScalingParam</a> &amp;etalonS, FILE *confFile=NULL, FILE *numMonomersFile=NULL, FILE *scalingParamFile=NULL, int eachStep=1)</td></tr>
 <tr class="separator:aec67d14d95d0482dc7dc08155abb0609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -123,8 +124,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a5286d41c8e899e596526fb936a5e2a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18511591a08a3c6bc6e5fbc48b488a41"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a_1_1_polymer_scaling.html#a18511591a08a3c6bc6e5fbc48b488a41">observableVSscalingSteps</a> (<a class="el" href="class_p_c_a_1_1_polymer_scaling.html#aa4112660455a10f29c208c96655718c0">Observable</a> observable, const <a class="el" href="class_p_c_a_1_1_polymer.html">Polymer</a> &amp;polymer, const <a class="el" href="class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html">ScalingParam</a> &amp;etalonS, char *resultFile, char *confFile=NULL, char *numMonomersFile=NULL, char *scalingParamFile=NULL)</td></tr>
 <tr class="separator:a18511591a08a3c6bc6e5fbc48b488a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca7d618f0d4ffe3edb9c72ce28839e4f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a_1_1_polymer_scaling.html#aca7d618f0d4ffe3edb9c72ce28839e4f">observableVSscalingStepsWithStatistics</a> (<a class="el" href="class_p_c_a_1_1_polymer_scaling.html#aa4112660455a10f29c208c96655718c0">Observable</a> observable, char *dataFileName, int statistics, const <a class="el" href="class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html">ScalingParam</a> &amp;etalonS, char *resultFile, char *confFile=NULL, char *numMonomersFile=NULL, char *scalingParamFile=NULL)</td></tr>
-<tr class="separator:aca7d618f0d4ffe3edb9c72ce28839e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96cc5054e2273840df3e6b08c593fc9c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a_1_1_polymer_scaling.html#a96cc5054e2273840df3e6b08c593fc9c">observableVSscalingStepsWithStatistics</a> (<a class="el" href="class_p_c_a_1_1_polymer_scaling.html#aa4112660455a10f29c208c96655718c0">Observable</a> observable, char *dataFileName, int statistics, const <a class="el" href="class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html">ScalingParam</a> &amp;etalonS, char *resultFile, char *confFile=NULL, char *numMonomersFile=NULL, char *scalingParamFile=NULL, int shiftForObservable=1)</td></tr>
+<tr class="separator:a96cc5054e2273840df3e6b08c593fc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Verbose functions:</div></td></tr>
 <tr class="memitem:a02f133a0bfdf54a7677c8f9637a4238a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_p_c_a_1_1_polymer_scaling.html#a02f133a0bfdf54a7677c8f9637a4238a">setVerbose</a> (double <a class="el" href="class_p_c_a_1_1_polymer_scaling.html#ade3a687fb33d7c74e78b38d3aca3a1ab">verbose</a>)</td></tr>
 <tr class="separator:a02f133a0bfdf54a7677c8f9637a4238a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -380,8 +381,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aca7d618f0d4ffe3edb9c72ce28839e4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca7d618f0d4ffe3edb9c72ce28839e4f">&sect;&nbsp;</a></span>observableVSscalingStepsWithStatistics()</h2>
+<a id="a96cc5054e2273840df3e6b08c593fc9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96cc5054e2273840df3e6b08c593fc9c">&sect;&nbsp;</a></span>observableVSscalingStepsWithStatistics()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,7 +436,13 @@ Static Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>scalingParamFile</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>scalingParamFile</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shiftForObservable</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -817,8 +824,8 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/annsi118/Documents/Git_projects/PCA/include/<a class="el" href="_polymer_scaling_8h_source.html">PolymerScaling.h</a></li>
-<li>/Users/annsi118/Documents/Git_projects/PCA/src/<a class="el" href="_polymer_scaling_8cpp.html">PolymerScaling.cpp</a></li>
+<li>/Users/annsi118/Documents/Git_projects/PCA/PCA_lib/include/<a class="el" href="_polymer_scaling_8h_source.html">PolymerScaling.h</a></li>
+<li>/Users/annsi118/Documents/Git_projects/PCA/PCA_lib/source/<a class="el" href="_polymer_scaling_8cpp.html">PolymerScaling.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

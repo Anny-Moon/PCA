@@ -28,9 +28,9 @@ public:
     
     /** ..
     * \f[
-    * \theta = \frac{1}{N\sqrt {N}} \sum_{i,j}^N
+    * \theta = \sum_{i+k<j}^N
     * \frac{(\vec{t}_i\cdot \vec{t}_j)}{\vert\vec{t}_i\vert\vert\vec{t}_j\vert}
-    * \f] where N is number of monomers.*/
+    * \f] where N is number of monomers, k is number of terms we exclude from the summation.*/
     static double totalAngle(const Polymer& polymer, int shift = 1);
     
 };

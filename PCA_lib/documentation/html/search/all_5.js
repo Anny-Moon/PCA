@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['emptyline',['emptyLine',['../map_dot_product_8m.html#a0736fc18fd1f21049126e64a04bef2a0',1,'emptyLine():&#160;mapDotProduct.m'],['../map_dot_product_movie_8m.html#a0736fc18fd1f21049126e64a04bef2a0',1,'emptyLine():&#160;mapDotProductMovie.m'],['../map_end_to_end_8m.html#a0736fc18fd1f21049126e64a04bef2a0',1,'emptyLine():&#160;mapEndToEnd.m'],['../map_end_to_end_movie_8m.html#a0736fc18fd1f21049126e64a04bef2a0',1,'emptyLine():&#160;mapEndToEndMovie.m'],['../scaling_movie_8m.html#a0736fc18fd1f21049126e64a04bef2a0',1,'emptyLine():&#160;scalingMovie.m'],['../scaling_movie__new_8m.html#a0736fc18fd1f21049126e64a04bef2a0',1,'emptyLine():&#160;scalingMovie_new.m'],['../scaling_picture_8m.html#a0736fc18fd1f21049126e64a04bef2a0',1,'emptyLine():&#160;scalingPicture.m'],['../scaling_picture__new_8m.html#a0736fc18fd1f21049126e64a04bef2a0',1,'emptyLine():&#160;scalingPicture_new.m']]],
-  ['equal',['equal',['../scaling_movie_8m.html#afeaa7ecdd726aa1950ba61dc659eb561',1,'equal():&#160;scalingMovie.m'],['../scaling_movie__new_8m.html#afeaa7ecdd726aa1950ba61dc659eb561',1,'equal():&#160;scalingMovie_new.m'],['../scaling_picture_8m.html#afeaa7ecdd726aa1950ba61dc659eb561',1,'equal():&#160;scalingPicture.m'],['../scaling_picture__new_8m.html#afeaa7ecdd726aa1950ba61dc659eb561',1,'equal():&#160;scalingPicture_new.m']]],
-  ['ex',['eX',['../class_p_c_a_1_1_vector.html#a2583e534812667f9e5cd69f53569c86b',1,'PCA::Vector']]],
-  ['ey',['eY',['../class_p_c_a_1_1_vector.html#ac937f2d1b63ca297cfa3c6d1eac26e1e',1,'PCA::Vector']]],
-  ['ez',['eZ',['../class_p_c_a_1_1_vector.html#a33a36b16ca1a698b6a0e730222406287',1,'PCA::Vector']]]
+  ['file',['File',['../class_p_c_a_1_1_file.html',1,'PCA']]],
+  ['file_2ecpp',['File.cpp',['../_file_8cpp.html',1,'']]],
+  ['file_2eh',['File.h',['../_file_8h.html',1,'']]],
+  ['fillarray',['fillArray',['../namespace_p_c_a.html#af4a7844595578d2c8e09635fba6db3b2',1,'PCA']]],
+  ['findcriticalscalingparam',['findCriticalScalingParam',['../class_p_c_a_1_1_polymer_scaling.html#a6188be73e2162d21f113a6cf8cde477b',1,'PCA::PolymerScaling']]],
+  ['findeverythingfroms',['findEverythingFromS',['../class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html#a06540f05eef5e1dd4abbb17ff5b3ee9c',1,'PCA::PolymerScaling::ScalingParam']]],
+  ['findnewscalingparam',['findNewScalingParam',['../class_p_c_a_1_1_polymer_scaling.html#ac58e92df3f25d46f03fe2231dcc1cf33',1,'PCA::PolymerScaling']]],
+  ['format',['format',['../class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html#a981e9bd9307e657fe02832ea5c4154fa',1,'PCA::PolymerScaling::ScalingParam']]],
+  ['formatall',['formatAll',['../class_p_c_a_1_1_polymer.html#a3fcca4084a54ac8bc1941b36462bc560',1,'PCA::Polymer']]],
+  ['fracpart',['fracPart',['../class_p_c_a_1_1_polymer_scaling_1_1_scaling_param.html#af063b31dba882f79d92fe9ce4819b6a4',1,'PCA::PolymerScaling::ScalingParam']]],
+  ['fullname',['fullName',['../class_p_c_a_1_1_data_handler.html#af10e8a5626d8f487c489e860591a7210',1,'PCA::DataHandler']]]
 ];
