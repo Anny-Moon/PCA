@@ -54,6 +54,7 @@ int main(int np, char **p)
     // create the full name of the input file
     char str [100];
     sprintf(str,"xyz_%s.dat",p[1]); //name of input file
+    DataHandler::setPath("");// write your own path if you want;
     sprintf(str,"%s",DataHandler::fullName(str).c_str());
     
     // name of output file with configurations

@@ -31,7 +31,7 @@ class DataHandler{
 public:
     static std::string path;//< path to the data folder
     
-    inline void setPath (const std::string& path_in="");
+    inline void static setPath (const std::string& path_in="");
     inline static std::string fullName (const std::string& name);
 };
 

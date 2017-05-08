@@ -59,6 +59,7 @@ int main(int np, char **p)
     // create the full name of input file
     char str [100];
     sprintf(str,"xyz_%s.dat",p[1]);
+    DataHandler::setPath("");// write your own path if you want;
     sprintf(str,"%s",DataHandler::fullName(str).c_str());
     
     //checking that all chains in the file have the same size, so can be taken for statistics
