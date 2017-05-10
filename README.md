@@ -96,7 +96,7 @@ All the input data should go to `PCA/data`. The format for files is:
 <x_last_atom>     <y_last_atom>     <z_last_atom>
 ```
 
-If you want several chains are taken for the statistics, put all of them in one file and separete them with one or more emty lines. All such blocks should have the same number of atoms:
+If you want several chains are taken for the statistics, put all of them in one file and separete them with one or more empty lines. All such blocks should have the same number of atoms:
 
 ```
 <block 1 with N lines>
