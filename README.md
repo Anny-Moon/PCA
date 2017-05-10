@@ -31,7 +31,7 @@ This you have to do every time when start new terminal session!
 There is automatically generated library documentation in `PCA_lib/documentation`.
 
 # Applications
-You can find 3 different independent programs in `/applications` folder. You can write your own application or change already existent ones. All applications use PCA library. If you did correctly the previous step, then you can copy and put applications in any folder on your computer.
+You can find 3 different independent programs in `applications` folder. You can write your own application or change already existent ones. All applications use PCA library. If you did correctly the previous step, then you can copy and put applications in any folder on your computer.
 To compile the project do
 ```bash
 myApplication$ make
@@ -53,7 +53,7 @@ There are two kind of tools:
 * Matlab functions for visualization chains
 * GNUplot script for plotting dependence of observables
 
-Put the tool you want to use in the root of application. Matlab functions works with all applications in `/applications`.
+Put the tool you want to use in the root of application. Matlab functions works with all applications in `applications`.
 
 ## Matlab
 If you have Matlab you can call from the workspace:
@@ -76,4 +76,4 @@ If you have GNUplot you can call
 ```
 myApplication$ gnuplot -e "polymerName='myPolymer'" -e "k=10" plotObservable.gnu
 ```
-for plotting dependence of Observable on scaling step for default value of k. It works for `/totalAngle` and  `/various_k` projects.
+for plotting dependence of Observable on scaling step for default value of k. It works for `totalAngle` and  `various_k` projects.
