@@ -84,3 +84,26 @@ If you have GNUplot you can call
 myApplication$ gnuplot -e "polymerName='myPolymer'" -e "k=10" plotObservable.gnu
 ```
 for plotting dependence of Observable on scaling step for default value of k. It works for `totalAngle` and  `various_k` projects.
+
+# Input Data
+All the input data should go to `PCA/data`. The format for files is:
+```
+<x_firts_atom>    <y_first_atom>    <z_first_atom>
+<x_second_atom>   <y_second_atom>   <z_second_atom>
+
+ ...               ...               ...
+ 
+<x_last_atom>     <y_last_atom>     <z_last_atom>
+```
+
+If you want several chains are taken for the statistics, put all of them in one file and separete them with one or more emty lines. All such blocks should have the same number of atoms:
+
+```
+<block 1 with N lines>
+    <empty line>
+<block 2 with N lines>
+    <empty line>
+...
+```
+
+You can see, there are several dat files for proteins from PDB. To convert pdb-format to xyz-format, this program was used: Anna Sinelnikova. (2017). Anny-Moon/Simple_PDB_parser. Zenodo. http://doi.org/10.5281/zenodo.571795
