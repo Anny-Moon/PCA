@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['r',['r',['../class_p_c_a_1_1_polymer.html#a9822e3b9c3420a04a689706b84e586ca',1,'PCA::Polymer']]]
+  ['path',['path',['../class_p_c_a_1_1_data_handler.html#a6ae4e41408d552649df07db5c3b25a29',1,'PCA::DataHandler']]]
 ];

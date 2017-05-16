@@ -37,7 +37,8 @@ class PolymerScaling
 private:
 
     static bool verbose;///< If false then this class is not allowed to print anything on screen
-
+    static bool optimalScalingParam;///< If true then all scaling functions where
+    //it is possible will use optimal scaling param, other wise s will be fixed during scaling procedure;
 public:
     class ScalingParam
     {private:
@@ -57,8 +58,17 @@ public:
 	~ScalingParam();
 	void format(double s_in);
 	
-	static void setAccuracy(double accuracy);
-	static double getAccuracy();
+	inline static void setAccuracy(double accuracy);
+	inline static double getAccuracy();
+	
+	ScalingParam& operator = (const ScalingParam& A){
+	    s = A.s;
+	    intPart = A.intPart;
+	    fracPart = A.fracPart;
+	    numerator = A.numerator;
+	    denominator = A.denominator;
+	    return *this;
+	}
     };
     
     enum class Observable {
@@ -100,7 +110,8 @@ public:
 	char* resultFile,
 	char* confFile=NULL,
 	char* numMonomersFile=NULL,
-	char* scalingParamFile=NULL
+	char* scalingParamFile=NULL,
+	int shiftForObservable = 1
     );
     
     /** .. All blocks in statistics should be of the SAME SIZE.
@@ -144,17 +155,50 @@ public:
     );
 
 
-    /** @name Triangular maps: */
+    
+    /** @name optimalScalingParam functions: */
     //@{
-    void writeMapEndToEndVideo(char* fileName, const ScalingParam& etalonS, FILE* confFile=NULL, FILE* numMonomersFile=NULL, FILE* scalingParamFile=NULL, int eachStep = 1);
-    void writeMapDotProductVideo(char* fileName, const ScalingParam& etalonS, FILE* confFile=NULL, FILE* numMonomersFile=NULL, FILE* scalingParamFile=NULL, int eachStep = 1);
+    inline static void setOptimalScalingParam(bool verbose);
+    inline static bool getOptimalScalingParam();
     //@}
     
     /** @name Verbose functions: */
     //@{
-    static void setVerbose(double verbose);
-    static bool getVerbose();
+    inline static void setVerbose(double verbose);
+    inline static bool getVerbose();
     //@}
+    
 };
+
+inline void PolymerScaling::setOptimalScalingParam(bool optimalScalingParam)
+{
+    PolymerScaling::optimalScalingParam = optimalScalingParam;
+}
+
+inline bool PolymerScaling::getOptimalScalingParam()
+{
+    return PolymerScaling::optimalScalingParam;
+}
+
+inline void PolymerScaling::ScalingParam::setAccuracy(double accuracy)
+{
+    ACCURACY = accuracy;
+}
+
+inline double PolymerScaling::ScalingParam::getAccuracy()
+{
+    return ACCURACY;
+}
+
+inline void PolymerScaling::setVerbose(double verbose)
+{
+    PolymerScaling::verbose = verbose;
+}
+
+inline bool PolymerScaling::getVerbose()
+{
+    return PolymerScaling::verbose;
+}
+
 }//end of namespace
 #endif

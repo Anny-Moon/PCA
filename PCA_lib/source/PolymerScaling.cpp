@@ -36,6 +36,8 @@ namespace PCA{
 
 double PolymerScaling::ScalingParam::ACCURACY = 1e4;
 bool PolymerScaling::verbose = true;
+bool PolymerScaling::optimalScalingParam = true;
+
 
 PolymerScaling::ScalingParam::ScalingParam(double s_in)
 {
@@ -106,16 +108,6 @@ void PolymerScaling::ScalingParam::findEverythingFromS()
     }
 }
 
-void PolymerScaling::ScalingParam::setAccuracy(double accuracy)
-{
-    ACCURACY = accuracy;
-}
-
-double PolymerScaling::ScalingParam::getAccuracy()
-{
-    return ACCURACY;
-}
-
 double PolymerScaling::findCriticalScalingParam(int numMonomers)
 {
     return (double)numMonomers/(double)(numMonomers-1);
@@ -143,14 +135,25 @@ void PolymerScaling::scaling(Polymer** polymer, const ScalingParam& etalonS, Sca
 {
     int i,k;
     int addExtraMonomer;
-    int newNumMonomers, partsToAdd, monomersToAdd;
+    int numMonomers, newNumMonomers, partsToAdd, monomersToAdd;
     const Vector* t;
     Vector* newT;
     int tmpIndex;
     Vector tmpVector;
     
     t = (*polymer)->getVectorsT();
-    newNumMonomers = PolymerScaling::findNewScalingParam((*polymer)->getNumMonomers(), etalonS, newS);
+    numMonomers = (*polymer)->getNumMonomers();
+    
+    if(optimalScalingParam)
+	newNumMonomers = PolymerScaling::findNewScalingParam(numMonomers, etalonS, newS);
+    
+    else{
+	*newS=etalonS;
+	newNumMonomers = numMonomers/newS->s;
+	if(newNumMonomers==numMonomers)
+	    newNumMonomers = numMonomers - 1;
+    }
+    
     newT = new Vector [newNumMonomers];
     
     tmpIndex = 0;
@@ -219,6 +222,7 @@ void PolymerScaling::scaling(Polymer** polymer, const ScalingParam& etalonS, Sca
 //    numMonomers = newNumMonomers;
 //    t = newT;
 //    Polymer* tmpPolymer = new Polymer(newNumMonomers, NULL, newT);
+
     delete *polymer;
     *polymer = new Polymer(newNumMonomers, NULL, newT);
 }
@@ -228,7 +232,7 @@ void PolymerScaling::scalingLoop(Polymer** polymer, const ScalingParam& etalonS,
     int i;
     
     int numMonomers;
-
+    
     ScalingParam newS(etalonS);
     
     numMonomers = (*polymer)->getNumMonomers();
@@ -237,7 +241,7 @@ void PolymerScaling::scalingLoop(Polymer** polymer, const ScalingParam& etalonS,
     while(numMonomers>etalonS.intPart+1.1 && i<loopSteps){
 	
 	scaling(polymer,etalonS, &newS);
-	
+	    
 	numMonomers = (*polymer)->getNumMonomers();
 	
 	if(confFile != NULL){
@@ -261,7 +265,7 @@ void PolymerScaling::observableVSscalingSteps(
 	    PolymerScaling::Observable observable,
 	    const Polymer& polymer,
 	    const ScalingParam& etalonS, char* resultFile,
-	    char* confFile, char* numMonomersFile, char* scalingParamFile)
+	    char* confFile, char* numMonomersFile, char* scalingParamFile, int shiftForObservable)
 {
     int i;
     double answ;
@@ -333,7 +337,7 @@ void PolymerScaling::observableVSscalingSteps(
 		answ = newS.s;
 		break;
 	    case PolymerScaling::Observable::totalAngle:
-		answ = PolymerObservable::totalAngle(*tmpPolymer);
+		answ = PolymerObservable::totalAngle(*tmpPolymer, shiftForObservable);
 		break;
 	    case PolymerScaling::Observable::radiusOfGyration:
 		tmpPolymer->setRadiusVectorsFromVectorsT();
@@ -348,6 +352,7 @@ void PolymerScaling::observableVSscalingSteps(
 	fprintf(resultFp, "%i\t%.14le\n",i, answ);
 	
 	scaling(&tmpPolymer,etalonS, &newS);
+	    
 	i++;
     }
     
@@ -410,8 +415,8 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
 	_PCA_CATCH_FILE_ERROR(scalingParamFp, "create", scalingParamFile,"PolymerScaling::observableVSscalingStepsWithStatistics()");
     }
     
-
     ScalingParam newS(etalonS);
+	
     i=0;// count numbers of sites only for the first chain in statistics
     polymer[i] = new Polymer(dataFileName, 0, i+1);
     numMonomers = polymer[i]->getNumMonomers();
@@ -454,10 +459,12 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
 	    }
 	}
 	
-	mean = PCA::meanValue(statistics, answ);
-	error = PCA::standardDeviation(statistics, answ);
-	fprintf(resultFp,"%i\t%.14le\t%.14le\n", k, mean, error);
-
+	if(numMonomers>shiftForObservable){
+	    mean = PCA::meanValue(statistics, answ);
+	    error = PCA::standardDeviation(statistics, answ);
+	    fprintf(resultFp,"%i\t%.14le\t%.14le\n", k, mean, error);
+	}
+	
 	if(confFp != NULL){
 	    polymer[0]->setRadiusVectorsFromVectorsT();
 	    polymer[0]->writeRadiusVectorsInFile(confFp);
@@ -499,13 +506,4 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
     delete [] polymer;
 }
 
-void PolymerScaling::setVerbose(double verbose)
-{
-    PolymerScaling::verbose = verbose;
-}
-
-bool PolymerScaling::getVerbose()
-{
-    return PolymerScaling::verbose;
-}
 }//end of namespace PCA

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['path',['path',['../class_p_c_a_1_1_data_handler.html#a6ae4e41408d552649df07db5c3b25a29',1,'PCA::DataHandler']]]
+  ['optimalscalingparam',['optimalScalingParam',['../class_p_c_a_1_1_polymer_scaling.html#aab1f9793e92e2b0c651a64de49d25967',1,'PCA::PolymerScaling']]]
 ];
