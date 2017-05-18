@@ -106,4 +106,5 @@ If you want several chains are taken for the statistics, put all of them in one 
 ...
 ```
 
-You can see, there are several dat files for proteins from PDB. To convert pdb-format to xyz-format, this program was used: Anna Sinelnikova. (2017). Anny-Moon/Simple_PDB_parser. Zenodo. http://doi.org/10.5281/zenodo.571795
+You can see, there are several dat files for proteins from PDB. To convert pdb-format to xyz-format, this program was used:
+https://github.com/Anny-Moon/Simple_PDB_parser.
