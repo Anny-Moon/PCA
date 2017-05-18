@@ -1,6 +1,6 @@
 # PCA
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.573754.svg)](https://doi.org/10.5281/zenodo.573754)
+[![DOI](https://zenodo.org/badge/73385795.svg)](https://zenodo.org/badge/latestdoi/73385795)
 
 Welcome to Polymer Chain Analyzer, the toolkit for geometric study of polymer chains.
 The project includes:
@@ -16,7 +16,7 @@ PCA project is distributed under Apache-2.0 license (see LICENSE and NOTICE(come
 ## Cite
 To cite the code use it's DOI
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.573754.svg)](https://doi.org/10.5281/zenodo.573754)
+[![DOI](https://zenodo.org/badge/73385795.svg)](https://zenodo.org/badge/latestdoi/73385795)
 
 Anna Sinelnikova. (2017). Anny-Moon/PCA: First release [Data set]. Zenodo. http://doi.org/10.5281/zenodo.573754
 
