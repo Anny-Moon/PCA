@@ -14,11 +14,9 @@ The detail description of the project will come soon in User Manual.
 PCA project is distributed under Apache-2.0 license (see LICENSE and NOTICE(comes soon)).
 
 ## Cite
-To cite the code use it's DOI
+Cite by the DOI:
 
 [![DOI](https://zenodo.org/badge/73385795.svg)](https://zenodo.org/badge/latestdoi/73385795)
-
-Anna Sinelnikova. (2017). Anny-Moon/PCA: First release [Data set]. Zenodo. http://doi.org/10.5281/zenodo.573754
 
 And make a reference to the paper: (comes soon).
 
