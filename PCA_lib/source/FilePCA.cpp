@@ -36,12 +36,12 @@ FilePCA::FilePCA(string fullFileName, int blockNumber) : File1(fullFileName){
     ifstream fin(fullFileName);
     
     if(!fin){
-	cout<<"Error while reading file:\nCannot find "<<fullFileName<<".\n";
+	cout<<"Error while opening file:\nCannot find '"<<fullFileName<<"'.\n";
 	exit(1);
     }
     
     if(blockNumber < 0){
-	cout<<"Error in while teading file:\ninvalid number of block.\n";
+	cout<<"Error while reading file:\ninvalid number of block.\n";
 	exit(1);
     }
     
@@ -101,12 +101,64 @@ void FilePCA::fillCoordinates(double* x_out, double* y_out, double* z_out) const
 
 }
 
-int FilePCA::countBlocks() const{
-
-    ifstream fin(fullFileName);
+int FilePCA::countLinesInBlock(std::string fileName, int blockNumber){
+    
+    ifstream fin(fileName);
     
     if(!fin){
-	cout<<"Error while reading file:\nCannot find "<<fullFileName<<"\n";
+	cout<<"Error while opening file:\nCannot find '"<<fileName<<"'.\n";
+	exit(1);
+    }
+    
+    if(blockNumber < 0){
+	cout<<"Error while reading file:\ninvalid number of block.\n";
+	exit(1);
+    }
+    
+    string line;
+    int blockCounter = 0;
+    bool prevLineEmpty = false;
+    int lineCounter = 0;
+    
+    while(getline(fin, line)){
+	stringstream sin(line);
+	
+	if(blockCounter == blockNumber+1)
+	    break;
+	    
+	else if(line.find_first_not_of(" \t\n\v\f\r") == std::string::npos){
+	    if(!prevLineEmpty)
+		blockCounter++;
+	    prevLineEmpty = true;
+	}
+	
+	else{
+	    prevLineEmpty = false;
+	    if(blockCounter==blockNumber){
+		lineCounter++;
+	    }
+	}
+    }
+
+    if(prevLineEmpty) //if file ends with new line
+	blockCounter--;
+
+    if(blockNumber > blockCounter){
+	printf("Error while reading file:\nYou have only %i blocks in your file. But you passed me number %i.\n",blockCounter+1, blockNumber);
+	printf("Hint: block counting starts with 0, i.e the last block has number %i!\n", blockCounter);
+	exit(1);
+    }
+    
+    fin.close();
+    return lineCounter;
+}
+
+int FilePCA::countBlocks(string fileName){
+
+    ifstream fin(fileName);
+    
+    if(!fin){
+	cout<<"Error while opening file:\nCannot find '"<<fileName<<"'.\n";
 	exit(1);
     }
     
@@ -133,6 +185,34 @@ int FilePCA::countBlocks() const{
 
     fin.close();
     return blockCounter+1;
+}
+
+bool FilePCA::checkAllBlocksHaveTheSameSize(std::string fileName){
+    
+    bool answ = true;
+    int numBlocks, numLinesInFirstBlock, tmp;
+    
+    numBlocks = FilePCA::countBlocks(fileName);
+    numLinesInFirstBlock = FilePCA::countLinesInBlock(fileName, 0);
+    
+    for(int i=1; i<numBlocks; i++){
+	tmp = FilePCA::countLinesInBlock(fileName, i);
+	    if(tmp != numLinesInFirstBlock)
+		return false;
+    }
+
+    return answ;
+}
+
+void FilePCA::showNumberOfLinesInBlocks(string fileName){
+
+    int numBlocks, numLines;
+    numBlocks = FilePCA::countBlocks(fileName);
+    cout<<"In file '"<<fileName<<"':\n";
+    for(int i=0; i<numBlocks; i++){
+	numLines = FilePCA::countLinesInBlock(fileName, i);
+	cout<<"Block "<<i<<" has "<<numLines<<" lines.\n";
+    }
 }
 
 void FilePCA::check() const{

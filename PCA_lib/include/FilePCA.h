@@ -30,13 +30,7 @@ namespace PCA{
 class FilePCA : public File1
 {
 public:
-    FilePCA(std::string fullFileName, int blockNumber = 0);
-    ~FilePCA();
-    
-    void fillCoordinates(double* x, double* y, double* z) const;
-    
-    /** Returns number of lines in one particular data block.
-    
+    /**
     * Block are separated from another one with one or more empty lines. The first has number 0.
     
     * NB1: in this version empty line is every line which starts with
@@ -45,18 +39,24 @@ public:
     
     * NB2: You can't have emty line before the first block.
     * You don't need to have empty line at the end of file.*/
-    int countLinesInBlock(int blockNumber = 0) const;
+    FilePCA(std::string fullFileName, int blockNumber = 0);
+    ~FilePCA();
+    
+    void fillCoordinates(double* x, double* y, double* z) const;
+    
+    /** Returns number of lines in one particular data block.*/
+    static int countLinesInBlock(std::string fileName, int blockNumber = 0);
     
     /** Return number of blocs in file */
-    int countBlocks() const;
+    static int countBlocks(std::string fileName);
     
     /** Check that all data blocks have the same number of lines */
-    bool checkAllBlocksHaveTheSameSize() const;
+    static bool checkAllBlocksHaveTheSameSize(std::string fileName);
     
     /** Print on screen list of blocks and number of lines in each.
     * Thus function will print on screen even if all
     * verbose are false */
-    void showNumberOfLinesInBlocks() const ;
+    static void showNumberOfLinesInBlocks(std::string fileName);
     
     /** For debugging */
     void check() const;
