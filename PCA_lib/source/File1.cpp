@@ -25,8 +25,8 @@
 using namespace PCA;
 using namespace std;
 
-File1::File1(string fileName){
+File1::File1(string fullFileName_in){
     verbose = true;
-    fileName = fileName;
+    fullFileName = fullFileName_in;
 
 }

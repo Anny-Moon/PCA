@@ -30,7 +30,7 @@ namespace PCA{
 class FilePCA : public File1
 {
 public:
-    FilePCA(std::string fileName, int blockNumber = 0);
+    FilePCA(std::string fullFileName, int blockNumber = 0);
     ~FilePCA();
     
     void fillCoordinates(double* x, double* y, double* z) const;
@@ -57,6 +57,9 @@ public:
     * Thus function will print on screen even if all
     * verbose are false */
     void showNumberOfLinesInBlocks() const ;
+    
+    /** For debugging */
+    void check() const;
 };
 
 }// end of namespace

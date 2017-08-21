@@ -33,7 +33,7 @@ class File1
 private:
     
 protected:
-    std::string fileName;
+    std::string fullFileName;
     std::string extention;
     
     std::vector<double> x;
@@ -43,13 +43,13 @@ protected:
     int numLines;
     
     bool verbose;
-    File1(std::string fileName);
+    File1(std::string fullFileName);
 public:
     
     virtual void fillCoordinates(double* x, double* y, double* z) const = 0;
     inline int getNumLines() const;
     
-    std::string getFileName() const;
+    std::string getFullFileName() const;
     std::string getExtention() const;
     
     ///@{@name Verbose functions:
@@ -64,8 +64,8 @@ inline int File1::getNumLines() const {
     return numLines;
 }
 
-inline std::string File1::getFileName() const {
-    return fileName;
+inline std::string File1::getFullFileName() const {
+    return fullFileName;
 }
 
 inline std::string File1::getExtention() const {

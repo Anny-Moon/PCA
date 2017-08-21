@@ -29,19 +29,14 @@
 using namespace PCA;
 using namespace std;
 
-FilePCA::FilePCA(string fileName, int blockNumber) : File1(fileName){
+FilePCA::FilePCA(string fullFileName, int blockNumber) : File1(fullFileName){
 
-    extention = "pca";
+    extention = ".pca";
     
-    int blockCounter = 0;
-    bool prevLineEmpty = false;
-    double value;;
-    
-    string line;
-    ifstream fin(fileName);
+    ifstream fin(fullFileName);
     
     if(!fin){
-	cout<<"Error while reading file:\nCannot find "<<fileName<<".\n";
+	cout<<"Error while reading file:\nCannot find "<<fullFileName<<".\n";
 	exit(1);
     }
     
@@ -50,19 +45,24 @@ FilePCA::FilePCA(string fileName, int blockNumber) : File1(fileName){
 	exit(1);
     }
     
+    string line;
+    int blockCounter = 0;
+    bool prevLineEmpty = false;
+    double value;
+    
     while(getline(fin, line)){
 	stringstream sin(line);
 	
 	if(blockCounter == blockNumber+1)
 	    break;
 	    
-	else if(line[0]=='\n'||line[0]=='\t'||line[0]==' '){
+	else if(line.find_first_not_of(" \t\n\v\f\r") == std::string::npos){
 	    if(!prevLineEmpty)
 		blockCounter++;
 	    prevLineEmpty = true;
-	    }
+	}
 	
-	else
+	else{
 	    prevLineEmpty = false;
 	    if(blockCounter==blockNumber){
 		sin>>value;
@@ -72,13 +72,15 @@ FilePCA::FilePCA(string fileName, int blockNumber) : File1(fileName){
 		sin>>value;
 		z.push_back(value);
 	    }
+	}
     }
 
-//    if(!prevLineEmpty) //if file ends without new line
-//	blockCounter++;
+    if(prevLineEmpty) //if file ends with new line
+	blockCounter--;
 
     if(blockNumber > blockCounter){
-	printf("Error while reading file:\nYou have only %i blocks in your file. But you passed me number %i\nNote: in files number of the first block is 1.\n",blockCounter, blockNumber);
+	printf("Error while reading file:\nYou have only %i blocks in your file. But you passed me number %i.\n",blockCounter+1, blockNumber);
+	printf("Hint: block counting starts with 0, i.e the last block has number %i!\n", blockCounter);
 	exit(1);
     }
     
@@ -96,5 +98,45 @@ void FilePCA::fillCoordinates(double* x_out, double* y_out, double* z_out) const
 	y_out[i] = y[i];
 	z_out[i] = z[i];
     }
+
+}
+
+int FilePCA::countBlocks() const{
+
+    ifstream fin(fullFileName);
+    
+    if(!fin){
+	cout<<"Error while reading file:\nCannot find "<<fullFileName<<"\n";
+	exit(1);
+    }
+    
+    string line;
+    int blockCounter = 0;
+    bool prevLineEmpty = false;
+    
+    while(getline(fin, line)){
+	stringstream sin(line);
+	
+	if(line.find_first_not_of(" \t\n\v\f\r") == std::string::npos){
+	    if(!prevLineEmpty)
+		blockCounter++;
+	    prevLineEmpty = true;
+	}
+	
+	else{
+	    prevLineEmpty = false;
+	}
+    }
+
+    if(prevLineEmpty) //if file ends with new line
+	blockCounter--;
+
+    fin.close();
+    return blockCounter+1;
+}
+
+void FilePCA::check() const{
+    for(int i=0;i<x.size();i++)
+	cout<<x[i]<<"\t"<<y[i]<<"\t"<<z[i]<<"\n";
 
 }
