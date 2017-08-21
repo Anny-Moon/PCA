@@ -20,8 +20,7 @@
 *   @data 2017
 */
 
-#include "../include/FilePCA.h"
-#include "../include/File1.h"
+#include "../../include/FileHandler/FilePCA.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -29,7 +28,7 @@
 using namespace PCA;
 using namespace std;
 
-FilePCA::FilePCA(string fullFileName, int blockNumber) : File1(fullFileName){
+FilePCA::FilePCA(string fullFileName, int blockNumber) : FileCoordinates(fullFileName){
 
     extention = ".pca";
     
@@ -88,8 +87,6 @@ FilePCA::FilePCA(string fullFileName, int blockNumber) : File1(fullFileName){
     
     numLines = x.size();
 }
-
-FilePCA::~FilePCA(){};
 
 void FilePCA::fillCoordinates(double* x_out, double* y_out, double* z_out) const{
 

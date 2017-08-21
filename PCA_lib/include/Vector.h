@@ -81,6 +81,9 @@ public:
     
     static double dotProduct(const Vector& A, const Vector& B);
     
+    /** Make array r from x,y,z : r[0] = {x[0],y[0],z[0]}, ...*/
+    static void makeArray(int size, Vector* r, double* x, double* y, double* z);
+    
     /** Copy array of size N: vector_to = vector_from */
     static void copyArray(int size, Vector* vector_to, const Vector* vector_from);
     static void KadanoffTransformation(int size, Vector* vector_out, const Vector* vector_in);

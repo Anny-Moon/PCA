@@ -22,12 +22,12 @@
 
 #pragma once
 
-#include "File1.h"
+#include "FileCoordinates.h"
 #include <string>
 
 namespace PCA{
 
-class FilePCA : public File1
+class FilePCA : public FileCoordinates
 {
 public:
     /**
@@ -39,8 +39,10 @@ public:
     
     * NB2: You can't have emty line before the first block.
     * You don't need to have empty line at the end of file.*/
+    
+    inline FilePCA();
     FilePCA(std::string fullFileName, int blockNumber = 0);
-    ~FilePCA();
+    inline ~FilePCA();
     
     void fillCoordinates(double* x, double* y, double* z) const;
     
@@ -61,5 +63,6 @@ public:
     /** For debugging */
     void check() const;
 };
-
+inline FilePCA::FilePCA() : FileCoordinates() {};
+FilePCA::~FilePCA(){};
 }// end of namespace

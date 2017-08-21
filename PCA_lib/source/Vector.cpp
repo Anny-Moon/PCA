@@ -67,19 +67,18 @@ void Vector::print() const
 	printf("%.15le\t%.15le\t%.15le\n", x, y, z);
 }
 
-void Vector::KadanoffTransformation(int size, Vector* vector_out, const Vector* vector_in)
-{
+void Vector::makeArray(int size, Vector* r, double* x, double* y, double* z){
     int i;
-
-    _PCA_CATCH_VOID_POINTER(vector_in, "Vector::KadanoffTransformation(.)")
+    _PCA_CATCH_VOID_POINTER(r, "Vector::makeArray(.)\n\tGive me pointer to final array.");
+    _PCA_CATCH_VOID_POINTER(x, "Vector::makeArray(.)\n\tGive me x.");
+    _PCA_CATCH_VOID_POINTER(y, "Vector::makeArray(.)\n\tGive me y.");
+    _PCA_CATCH_VOID_POINTER(z, "Vector::makeArray(.)\n\tGive me z.");
     
-    *vector_out = Vector::zero;
-
     for(i=0;i<size;i++){
-	*vector_out = *vector_out + vector_in[i];
+	r[i].x = x[i];
+	r[i].y = y[i];
+	r[i].z = z[i];
     }
-    
-    *vector_out = *vector_out/vector_out->norm();
 }
 
 void Vector::copyArray(int size, Vector* vector_to, const Vector* vector_from)

@@ -23,6 +23,7 @@
 #ifndef PCA_POLYMER
 #define PCA_POLYMER
 
+#include "FileHandler/FileCoordinates.h"
 #include "Vector.h"
 #include "Utilities.h"
 #include <stdlib.h>
@@ -39,17 +40,6 @@ class Polymer
     Vector* t; /**< tangent not-unit vectors*/
     Vector* r;/**< radius vectors */
     
-    /** Read file with x y z coordinates and fill . One line - one atom. One block - one chain.
-    * Block is separated from another one with one or more empty lines. The first has number 1 (not 0).
-    *
-    * NB1: in this version empty line is every line which starts with
-    * unprintable characters: \\n, \\t or space. That's why any line with data can't 
-    * have unprintable character at the beginning.
-    *
-    * NB2: You can't have emty line before the first block.
-    * You don't need to have empty line at the end of file.*/
-    void readFileWithCoordinates(char* fileName, int linesInBlock, int blockNumber = 1);
-    
     /** The same as destructor */
     void formatAll();
 public:
@@ -57,7 +47,7 @@ public:
     /** Constructor. Read coordinates of sites from file. If you have more than one
     * blocks in file then pass the number of the block. You can pass number of sites in
     * the block, but it is not necessarily.*/
-    Polymer(char* fileWithCoordinates, int numberOfSites = 0, int polymerNumber = 1);
+    Polymer(const FileCoordinates& reader);
     
     /** Constructor. */
     Polymer(int numMonomers_in, const Vector* r_in, const Vector* t_in);

@@ -20,12 +20,12 @@
 *   @data 2017
 */
 
-#include "../include/File1.h"
+#include "../../include/FileHandler/FileCoordinates.h"
 
 using namespace PCA;
 using namespace std;
 
-File1::File1(string fullFileName_in){
+FileCoordinates::FileCoordinates(string fullFileName_in){
     verbose = true;
     fullFileName = fullFileName_in;
 

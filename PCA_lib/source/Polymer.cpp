@@ -29,76 +29,11 @@
 #include "PCAmacros.h"
 
 namespace PCA{
-
-void Polymer::readFileWithCoordinates(char* fileName, int linesInBlock, int blockNumber)
-{
-    int i=0;
-    int blockCounter = 0;
-    bool prevLineEmpty = false;
-    char line[100];
-    FILE *fp;
-    double x_in, y_in, z_in;
-    
-    fp = fopen(fileName, "r");
-    _PCA_CATCH_FILE_ERROR(fp, "open", fileName, "Polymer::readFileWithCoordinates");
-
-    if(blockNumber == 0){
-	printf("Error in Polymer::readFileWithCoordinates:\nnumber of the first block is 1 in data files. You passed me 0!\n");
-	exit(1);
-    }
-    
-    
-    
-    while(fgets(line, sizeof line, fp)!=NULL){
-	
-	if(blockCounter == blockNumber-1)
-	    break;
-	    
-	else if(line[0]=='\n'||line[0]=='\t'||line[0]==' '){
-	    if(!prevLineEmpty)
-		blockCounter++;
-	    prevLineEmpty = true;
-	    }
-	
-	else
-	    prevLineEmpty = false;
-    }
-
-    if(!prevLineEmpty)
-	blockCounter++;
-
-    if(blockNumber > blockCounter+1){
-	printf("Error in readFileWithCoordinates:\nYou have only %i blocks in your file. But you passed me number %i\nNote: in files number of the first block is 1.\n",blockCounter, blockNumber);
-	exit(1);
-    }
-
-    int firstElement=0;
-    
-    if(line[0]!='\n'&&line[0]!='\t'&&line[0]!=' '){
-	    sscanf(line,"%le %le %le",&x_in, &y_in, &z_in);
-	    setRadiusVector(0, x_in, y_in, z_in);
-	    firstElement = 1;
-	}
-
-    for(i=firstElement;i<linesInBlock;i++){
-	fscanf(fp,"%le",&x_in);
-	fscanf(fp,"%le",&y_in);
-	fscanf(fp,"%le",&z_in);
-	setRadiusVector(i, x_in, y_in, z_in);
-    }
-    
-    fclose(fp);
-}
-
-Polymer::Polymer(char* fileWithCoordinates, int numberOfSites, int polymerNumber)
+Polymer::Polymer(const FileCoordinates& reader)
 {
     int size;
-    
-    if(numberOfSites == 0)
-	size = File::countLinesInBlock(fileWithCoordinates, polymerNumber);
-	
-    else
-	size = numberOfSites;
+    double *x, *y, *z;
+    size = reader.getNumLines();
 
     this->numMonomers = size-1;
     
@@ -106,8 +41,15 @@ Polymer::Polymer(char* fileWithCoordinates, int numberOfSites, int polymerNumber
     r = NULL;
     t = NULL;
     
-    r = new Vector[numMonomers+1];
-    readFileWithCoordinates(fileWithCoordinates, size, polymerNumber);
+    r = new Vector [size];
+    x = new double [size];
+    y = new double [size];
+    z = new double [size];
+    reader.fillCoordinates(x,y,z);
+    Vector::makeArray(size, r, x, y, z);
+    delete [] x;
+    delete [] y;
+    delete [] z;
     
     monomerLength = new double [numMonomers];
     setMonomerLengthsFromRadiusVectors();

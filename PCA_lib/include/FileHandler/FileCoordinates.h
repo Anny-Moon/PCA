@@ -14,7 +14,7 @@
 */
 
 /** @package PCA
-*   @file File.h
+*   @file FileCoordinates.h
 *
 *   @autor Anna Sinelnikova
 *   @data 2017
@@ -27,8 +27,8 @@
 
 namespace PCA{
 
-/* Pure virtial class*/
-class File1
+/** This class is a parent class for all files with coordinates */
+class FileCoordinates
 {
 private:
     
@@ -43,8 +43,11 @@ protected:
     int numLines;
     
     bool verbose;
-    File1(std::string fullFileName);
+    
 public:
+    
+    inline FileCoordinates();
+    FileCoordinates(std::string fullFileName);
     
     virtual void fillCoordinates(double* x, double* y, double* z) const = 0;
     inline int getNumLines() const;
@@ -56,30 +59,31 @@ public:
     inline void setVerbose(bool verbose);
     inline bool getVerbose() const;
     ///@}
-    inline ~File1();
+    virtual inline ~FileCoordinates() = 0;
 };
 
 
-inline int File1::getNumLines() const {
+inline int FileCoordinates::getNumLines() const {
     return numLines;
 }
 
-inline std::string File1::getFullFileName() const {
+inline std::string FileCoordinates::getFullFileName() const {
     return fullFileName;
 }
 
-inline std::string File1::getExtention() const {
+inline std::string FileCoordinates::getExtention() const {
     return extention;
 }
 
-inline void File1::setVerbose(bool verbose){
-    File1::verbose = verbose;
+inline void FileCoordinates::setVerbose(bool verbose){
+    FileCoordinates::verbose = verbose;
 }
 
-inline bool File1::getVerbose() const {
-    return File1::verbose;
+inline bool FileCoordinates::getVerbose() const {
+    return FileCoordinates::verbose;
 }
 
-inline File1::~File1(){};
+inline FileCoordinates::FileCoordinates(){};
+inline FileCoordinates::~FileCoordinates(){};
 
 }// end of namespace

@@ -25,6 +25,7 @@
 #include "../include/PolymerObservable.h"
 #include "../include/Utilities.h"
 #include "../include/File.h"
+#include "../include/FileHandler/FilePCA.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -387,13 +388,16 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
     FILE* confFp=NULL;
     FILE* numMonomersFp=NULL;
     FILE* scalingParamFp=NULL;
+    FileCoordinates* reader;
     
     Polymer** polymer;
 
 
     if(statistics==0)
-	statistics = File::countBlocks(dataFileName);
+	statistics = FilePCA::countBlocks(dataFileName);
     answ = new double[statistics];
+    
+    reader = new FilePCA[statistics];
     polymer = new Polymer*[statistics];
 
     _PCA_CATCH_VOID_POINTER(resultFile, "PolymerScaling::observableVSscalingStepsWithStatistics\n\tPass me the name for the result file\n");
@@ -418,12 +422,15 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
     ScalingParam newS(etalonS);
 	
     i=0;// count numbers of sites only for the first chain in statistics
-    polymer[i] = new Polymer(dataFileName, 0, i+1);
+    reader[i] = FilePCA(dataFileName, i);
+    polymer[i] = new Polymer(reader[i]);
     numMonomers = polymer[i]->getNumMonomers();
 
-    for(i=1;i<statistics;i++)
-	polymer[i] = new Polymer(dataFileName, numMonomers+1, i+1);
-
+    for(i=1;i<statistics;i++){
+	reader[i] = FilePCA(dataFileName, i);
+	polymer[i] = new Polymer(reader[i]);
+    }
+    
     if(PolymerScaling::verbose && globalVerbose)
 	printf("Scaling step:\n");
 	
@@ -503,6 +510,8 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
 
     for(i=0;i<statistics;i++)
 	delete polymer[i];
+    
+    delete [] reader;
     delete [] polymer;
 }
 
