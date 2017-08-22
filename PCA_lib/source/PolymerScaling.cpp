@@ -226,6 +226,7 @@ void PolymerScaling::scaling(Polymer** polymer, const ScalingParam& etalonS, Sca
 
     delete *polymer;
     *polymer = new Polymer(newNumMonomers, NULL, newT);
+    delete [] newT;
 }
 
 void PolymerScaling::scalingLoop(Polymer** polymer, const ScalingParam& etalonS,FILE* confFile, FILE* numMonomersFile, FILE* scalingParamFile, int loopSteps)
@@ -422,15 +423,15 @@ void PolymerScaling::observableVSscalingStepsWithStatistics(
     i=0;// count numbers of sites only for the first chain in statistics
     reader = new FilePCA(dataFileName, i);
     polymer[i] = new Polymer(*reader);
-//    delete reader;
+    delete reader;
     numMonomers = polymer[i]->getNumMonomers();
 
     for(i=1;i<statistics;i++){
-//	reader = new FilePCA(dataFileName, i);
+	reader = new FilePCA(dataFileName, i);
 	polymer[i] = new Polymer(*reader);
-//	delete reader;
+	delete reader;
     }
-delete reader;    
+
     if(PolymerScaling::verbose && globalVerbose)
 	printf("Scaling step:\n");
 	
