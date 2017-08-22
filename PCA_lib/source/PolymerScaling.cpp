@@ -225,6 +225,7 @@ void PolymerScaling::scaling(Polymer** polymer, const ScalingParam& etalonS, Sca
 
     delete *polymer;
     *polymer = new Polymer(newNumMonomers, NULL, newT);
+    delete [] newT;
 }
 
 void PolymerScaling::scalingLoop(Polymer** polymer, const ScalingParam& etalonS,FILE* confFile, FILE* numMonomersFile, FILE* scalingParamFile, int loopSteps)
