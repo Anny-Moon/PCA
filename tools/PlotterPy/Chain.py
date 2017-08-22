@@ -1,6 +1,7 @@
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import random
+import Color
 
 class Chain():
     def __init__(self):
@@ -37,6 +38,54 @@ class Chain():
 
 	N=len(self.x);
 	for i in range (0, N-1):
+	    line = [(self.x[i],self.y[i],self.z[i]),
+		(self.x[i+1],self.y[i+1],self.z[i+1])];
+	    (x, y, z) = zip(*line);
+	    ax.scatter(x,y,z, c = colorDot, alpha = 1, s=sizeDot);
+	    ax.plot(x,y,z, c = colorLine, alpha = 1, lw=sizeLine);
+	
+	
+    def smartColorPlot(self, ax, axMaxRange=None):
+	if(axMaxRange == None):
+	    axMaxRange = 20;
+	sizeLine = 30/axMaxRange;
+	if(sizeLine<1):
+	    sizeLine=1;
+	sizeDot = 800/axMaxRange;
+	#sizeDot = 1000/axMaxRange;
+	
+	colorLine = "000000";
+	r = lambda: random.uniform(0,1);
+	R = r();
+	G = r();
+	B = r();
+	
+	N=len(self.x);
+	for i in range (0, N-1):
+	    colorDot = Color.newSmartHSVcolor(R,G,B, 0.05, 0.05, 0.05);
+	    
+	    line = [(self.x[i],self.y[i],self.z[i]),
+		(self.x[i+1],self.y[i+1],self.z[i+1])];
+	    (x, y, z) = zip(*line);
+	    ax.scatter(x,y,z, c = colorDot, alpha = 1, s=sizeDot);
+	    ax.plot(x,y,z, c = colorLine, alpha = 1, lw=sizeLine);
+	
+    def happyPlot(self, ax, axMaxRange=None):
+	if(axMaxRange == None):
+	    axMaxRange = 20;
+	sizeLine = 30/axMaxRange;
+	if(sizeLine<1):
+	    sizeLine=1;
+	sizeDot = 800/axMaxRange;
+	#sizeDot = 1000/axMaxRange;
+	
+	colorLine = "000000";
+
+	N=len(self.x);
+	for i in range (0, N-1):
+	    r = lambda: random.randint(0,255);
+	    colorDot = '#%02X%02X%02X' % (r(),r(),r());
+	    
 	    line = [(self.x[i],self.y[i],self.z[i]),
 		(self.x[i+1],self.y[i+1],self.z[i+1])];
 	    (x, y, z) = zip(*line);

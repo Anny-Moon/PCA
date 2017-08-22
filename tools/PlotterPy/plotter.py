@@ -9,7 +9,7 @@ plot the  0-th configuration.
 
 #============ parameters ===============
 # Plot
-dotSize = 10; # ~40
+dotSize = None; # ~40
 dotColor = None; #if None then will be random
 lineColor = None; #if None then will be random
 
@@ -53,7 +53,9 @@ else:
 	
     for i in range(2,len(sys.argv)):
 	confNum = int(sys.argv[i]);
-	polymer.plot(confNum,ax, axMaxRange, dotColor, lineColor);
+#	polymer.plot(confNum,ax, axMaxRange, dotColor, lineColor);
+	polymer.smartColorPlot(confNum,ax, axMaxRange);
+#	polymer.happyPlot(confNum,ax, axMaxRange);
 #	polymer.plotOld(confNum, ax);
 	
     
