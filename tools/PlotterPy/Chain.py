@@ -54,7 +54,7 @@ class Chain():
 	sizeDot = 800/axMaxRange;
 	#sizeDot = 1000/axMaxRange;
 	
-	colorLine = "000000";
+	colorLine = "#000000";
 	r = lambda: random.uniform(0,1);
 	R = r();
 	G = r();
@@ -79,7 +79,7 @@ class Chain():
 	sizeDot = 800/axMaxRange;
 	#sizeDot = 1000/axMaxRange;
 	
-	colorLine = "000000";
+	colorLine = "#000000";
 
 	N=len(self.x);
 	for i in range (0, N-1):
