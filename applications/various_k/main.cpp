@@ -18,7 +18,8 @@
 #include <math.h>
 #include "Vector.h"
 #include "Utilities.h"
-#include "File.h"
+//#include "File.h"
+#include "FileHandler/FilePCA.h"
 #include "Polymer.h"
 #include "PolymerObservable.h"
 #include "PolymerScaling.h"
@@ -36,7 +37,7 @@ int main(int np, char **p)
     if(p[1]==NULL){
 	printf("------------------------\n");
 	printf("Give me the name of the chain as the argument.\n");
-	printf("Then I will open 'data/xyz_<name>.dat'.\n");
+	printf("Then I will open 'data/<name>.pca'.\n");
 	printf("For example: ./pca 5dn7\n");
 	printf("I will calculate total angle VS number of scaling step.\n");
 	printf("------------------------\n");
@@ -64,12 +65,12 @@ int main(int np, char **p)
     
     //checking that all chains in the file have the same size, so can be taken for statistics
     _PCA_CHECK_BLOCKS_SIZE_IN_FILE(str);
-    printf("Number of blocks: %i\n",File::countBlocks(str));
-    printf("Number of sites in each block: %i\n",File::countLinesInBlock(str));
+    printf("Number of blocks: %i\n",FilePCA::countBlocks(str));
+    printf("Number of sites in each block: %i\n",FilePCA::countLinesInBlock(str));
     
     // name of output file with configurations
     char confFile[100];
-    sprintf(confFile,"results/%s_configurations.dat",p[1]);
+    sprintf(confFile,"results/%s_rescaled.pca",p[1]);
     
     // name of output file with number of monomers during scaling procedure
     char numMonomersFile[100];
@@ -79,10 +80,11 @@ int main(int np, char **p)
     char scalingParamFile[100];
     sprintf(scalingParamFile,"results/%s_scalingParam.dat",p[1]);
     
-    
-    
+    // finding optimal scaling parameter
+    int confNumber = 0; //number of chain in file
+    FilePCA reader(str,confNumber);
     Polymer* polymer;	
-    polymer = new Polymer(str,0,1);
+    polymer = new Polymer(reader);
     double tmp;
     int N = polymer->getNumMonomers();
     tmp = PolymerScaling::findCriticalScalingParam(N);

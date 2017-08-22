@@ -18,7 +18,8 @@
 #include <math.h>
 #include "Vector.h"
 #include "Utilities.h"
-#include "File.h"
+//#include "File.h"
+#include "FileHandler/FilePCA.h"
 #include "Polymer.h"
 #include "PolymerObservable.h"
 #include "PolymerScaling.h"
@@ -35,7 +36,7 @@ int main(int np, char **p)
     if(p[1]==NULL){
 	printf("------------------------\n");
 	printf("Give me the name of the chain as the argument.\n");
-	printf("Then I will open 'data/xyz_<name>.dat'.\n");
+	printf("Then I will open 'data/<name>.pca'.\n");
 	printf("For example: ./pca 5dn7\n");
 	printf("------------------------\n");
 	printf("If you have more than one chain (which should be separated ");
@@ -51,15 +52,19 @@ int main(int np, char **p)
     printf("------------------------\n");
     
     printf("Polymer name: %s\n", p[1]);
+    
     // create the full name of the input file
     char str [100];
-    sprintf(str,"xyz_%s.dat",p[1]); //name of input file
+    sprintf(str,"%s.pca",p[1]); //name of input file
     DataHandler::setPath("");// write your own path if you want;
     sprintf(str,"%s",DataHandler::fullName(str).c_str());
     
+    int confNumber = 0; //number of chain in file
+    FilePCA reader(str,confNumber); // can be any reader, a child class from FileCoordinates
+    
     // name of output file with configurations
     char confFile[100];
-    sprintf(confFile,"results/%s_configurations.dat",p[1]);
+    sprintf(confFile,"results/%s_rescaled.pca",p[1]);
     
     // name of output file with number of monomers during scaling procedure
     char numMonomersFile[100];
@@ -71,16 +76,16 @@ int main(int np, char **p)
     sprintf(resultFile,"results/%s_scalingParamVSsteps.dat",p[1]); 
     
     // finding optimal scaling parameter
-    Polymer polymer(str,0,1);
+    
+    Polymer polymer(reader);
     double tmp;
     tmp = PolymerScaling::findCriticalScalingParam(polymer.getNumMonomers());
     PolymerScaling::ScalingParam sp(tmp);
     
-		
     // scaling
     PolymerScaling::observableVSscalingSteps(
 	PolymerScaling::Observable::scalingParameter,
-	 polymer,
+	polymer,
 	sp,
 	resultFile,
 	confFile,

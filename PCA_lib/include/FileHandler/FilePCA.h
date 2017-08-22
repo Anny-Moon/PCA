@@ -23,7 +23,17 @@
 #pragma once
 
 #include "FileCoordinates.h"
+#include <iostream>
 #include <string>
+
+#define _PCA_CHECK_BLOCKS_SIZE_IN_FILE(str)\
+    if(!FilePCA::checkAllBlocksHaveTheSameSize(str)){\
+	printf("Error in data file:\n");\
+	printf("All the chains in your file should be of the same size. ");\
+	printf("But it is not the case.\nLook:\n");\
+	FilePCA::showNumberOfLinesInBlocks(str);\
+	exit(1);\
+    }
 
 namespace PCA{
 

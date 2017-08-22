@@ -50,13 +50,4 @@
 #define _PCA_IS_EQUAL(a,b)\
      fabs(a-b)<PCA_NUMERICAL_ERROR
 
-#define _PCA_CHECK_BLOCKS_SIZE_IN_FILE(str)\
-    if(!File::checkAllBlocksHaveTheSameSize(str)){\
-	printf("Error in data file:\n");\
-	printf("All the chains in your file should be of the same size. ");\
-	printf("But it is not the case.\nLook:\n");\
-	File::showNumberOfLinesInBlocks(str);\
-	exit(1);\
-    }
-
 #endif

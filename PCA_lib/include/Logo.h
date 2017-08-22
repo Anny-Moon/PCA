@@ -46,7 +46,7 @@ inline void Logo::print(){
     printf("+  |   __ /   |  \\ __   |  ___   |  +\n");
     printf("+  |__|        \\ ___ /  |_|   |__|  +\n");
     printf("-------------------------------------\n");
-    printf("============================Anna=====\n");
+    printf("============================2017=====\n");
 }
 
 inline void Logo::printInFile(FILE* fp){

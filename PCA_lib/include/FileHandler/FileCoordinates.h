@@ -24,6 +24,7 @@
 
 #include <vector>
 #include <string>
+#include <iostream>
 
 namespace PCA{
 
@@ -59,7 +60,7 @@ public:
     inline void setVerbose(bool verbose);
     inline bool getVerbose() const;
     ///@}
-    virtual inline ~FileCoordinates() = 0;
+    virtual inline ~FileCoordinates();
 };
 
 
