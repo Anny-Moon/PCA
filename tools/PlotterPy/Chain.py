@@ -45,7 +45,7 @@ class Chain():
 	    ax.plot(x,y,z, c = colorLine, alpha = 1, lw=sizeLine);
 	
 	
-    def smartColorPlot(self, ax, axMaxRange=None):
+    def smartColorPlot(self, ax, axMaxRange=None, colorDot=None):
 	if(axMaxRange == None):
 	    axMaxRange = 20;
 	sizeLine = 30/axMaxRange;
@@ -55,19 +55,20 @@ class Chain():
 	#sizeDot = 1000/axMaxRange;
 	
 	colorLine = "#000000";
-	r = lambda: random.uniform(0,1);
-	R = r();
-	G = r();
-	B = r();
+	
+	if (colorDot==None):
+	    r = lambda: random.randint(0,255);
+	    colorDot = (r(),r(),r());
+	else:
+	    colorDot = Color.hex_to_rgb(colorDot);
 	
 	N=len(self.x);
 	for i in range (0, N-1):
-	    colorDot = Color.newSmartHSVcolor(R,G,B, 0.05, 0.05, 0.05);
-	    
+	    colorDotNew = Color.newSmartHSVcolor(colorDot, 0.05, 0.05, 0.05);
 	    line = [(self.x[i],self.y[i],self.z[i]),
 		(self.x[i+1],self.y[i+1],self.z[i+1])];
 	    (x, y, z) = zip(*line);
-	    ax.scatter(x,y,z, c = colorDot, alpha = 1, s=sizeDot);
+	    ax.scatter(x,y,z, c = colorDotNew, alpha = 1, s=sizeDot);
 	    ax.plot(x,y,z, c = colorLine, alpha = 1, lw=sizeLine);
 	
     def happyPlot(self, ax, axMaxRange=None):

@@ -54,7 +54,7 @@ else:
     for i in range(2,len(sys.argv)):
 	confNum = int(sys.argv[i]);
 #	polymer.plot(confNum,ax, axMaxRange, dotColor, lineColor);
-	polymer.smartColorPlot(confNum,ax, axMaxRange);
+	polymer.smartColorPlot(confNum,ax, axMaxRange, "#002255");
 #	polymer.happyPlot(confNum,ax, axMaxRange);
 #	polymer.plotOld(confNum, ax);
 	

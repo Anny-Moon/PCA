@@ -36,8 +36,8 @@ class Polymer():
     def plot(self, confNum, ax, axMaxRange=None, colorDot=None, colorLine=None):
 	self.chain[confNum].plot(ax, axMaxRange, colorDot, colorLine);
 
-    def smartColorPlot(self, confNum, ax, axMaxRange=None):
-	self.chain[confNum].smartColorPlot(ax, axMaxRange);
+    def smartColorPlot(self, confNum, ax, axMaxRange=None, colorDot=None):
+	self.chain[confNum].smartColorPlot(ax, axMaxRange, colorDot);
 	
     def happyPlot(self, confNum, ax, axMaxRange=None):
 	self.chain[confNum].happyPlot(ax, axMaxRange);
