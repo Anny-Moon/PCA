@@ -36,8 +36,8 @@ class Polymer():
     def plot(self, confNum, ax, axMaxRange=None, colorDot=None, colorLine=None):
 	self.chain[confNum].plot(ax, axMaxRange, colorDot, colorLine);
 
-    def smartColorPlot(self, confNum, ax, axMaxRange=None, colorDot=None):
-	self.chain[confNum].smartColorPlot(ax, axMaxRange, colorDot);
+    def smartColorPlot(self, confNum, ax, axMaxRange=None, colorDot=None, colorLine=None):
+	self.chain[confNum].smartColorPlot(ax, axMaxRange, colorDot, colorLine);
 	
     def happyPlot(self, confNum, ax, axMaxRange=None):
 	self.chain[confNum].happyPlot(ax, axMaxRange);
@@ -47,6 +47,8 @@ class Polymer():
 	
     def getChain(self, chainNum):
 	return self.chain[chainNum];
+    def getChainLenght(self, chainNum):
+	return self.chain[chainNum].getNumSites();
     def getN(self, chainNum):
 	return self.N[chainNum];
     def getNumChains(self):

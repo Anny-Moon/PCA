@@ -21,9 +21,11 @@ dpi = 200;
 frames = None; #number of frames, defailt = all frames
 
 # Plot
-dotSize = 8;
-dotColor = '#cc0000';
-lineColor = '#006699';
+dotSize = 20;
+#dotColor = '#c21734';
+#lineColor = '#006699';
+dotColor = '#0066cc';
+lineColor = '#000000';
 
 # Axes
 elevation = None;
@@ -34,6 +36,7 @@ axisOnOff ='off';
 import matplotlib.pyplot as plt
 import Polymer
 import EqualAxes
+import Color
 import sys
 import math
 import matplotlib.animation as animation
@@ -45,7 +48,9 @@ def update(i, increment):
 	print('Chain %s has %i atoms.' % (confNum,polymer.getN(confNum)));
     
     #axMaxRange=eqAx.findMaxRange();
-	polymer.plot(confNum,ax,800/dotSize, dotColor, lineColor);
+	
+	polymer.plot(confNum,ax,800/dotSize, dotSmartColors, lineColor);
+#	polymer.smartColorPlot(confNum,ax,800/dotSize, dotColor, lineColor);
 	eqAx.set(ax);
 	ax.view_init(elevation, azimut);
 	plt.axis(axisOnOff);
@@ -56,7 +61,7 @@ if(len(sys.argv)<2):
 
 fileNameIn = sys.argv[1];
 polymer = Polymer.Polymer(fileNameIn);
-
+dotSmartColors = Color.arrayWithSmartColors(polymer.getChainLenght(0),0.05,0.05,0.05,dotColor);
 fig = plt.figure()
 ax = fig.gca(projection='3d');
 ax.set_aspect('equal');
@@ -93,11 +98,11 @@ if(len(sys.argv)<4):
 else:
     extention = sys.argv[3];
     fileName=fileNameIn[:-3];
-    fileNameOut=fileName + extention;
+    fileNameOut=fileName +extention;
     
     #if pass fileNameOut
     if(len(sys.argv)>4):
-	fileNameOut = sys.argv[4] + extention;
+	fileNameOut = sys.argv[4] +"."+ extention;
     
     if(sys.argv[3]=='gif'):
 	writer = animation.ImageMagickFileWriter(fps=fps);

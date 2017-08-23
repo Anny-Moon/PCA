@@ -35,3 +35,17 @@ def newSmartHSVcolor(color, dispH, dispS, dispV):
 #    print(s);
 #    print(v);
     return color;
+
+def arrayWithSmartColors(size, dispH, dispS, dispV, color):
+    if (color==None):
+	r = lambda: random.randint(0,255);
+	color = (r(),r(),r());
+    else:
+	color = hex_to_rgb(color);
+    
+    array = [];
+    for i in range (0, size-1):
+	array.append(newSmartHSVcolor(color, 0.05, 0.15, 0.15));
+    return array;
+	
+	
