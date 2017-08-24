@@ -27,8 +27,8 @@ dotSize = 20;
 dotColor = '#006699';
 lineColor = '#c21734';
 dotHueDispersion = 0.01; #[0,1];
-dotSaturationDispersion = 0.01; #[0,1];
-dotVolumeDispersion = 0.01; #[0,1];
+dotSaturationDispersion = 0.5; #[0,1];
+dotVolumeDispersion = 0.2; #[0,1];
 
 
 # Axes
