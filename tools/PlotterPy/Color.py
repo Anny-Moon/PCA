@@ -44,7 +44,7 @@ def arrayWithSmartColors(size, dispH, dispS, dispV, color):
 	color = hex_to_rgb(color);
     
     array = [];
-    for i in range (0, size-1):
+    for i in range (0, size):
 	array.append(newSmartHSVcolor(color, 0.05, 0.15, 0.15));
     return array;
 	

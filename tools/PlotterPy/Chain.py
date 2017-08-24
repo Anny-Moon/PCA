@@ -27,34 +27,30 @@ class Chain():
 	colorDotArray = [];
 	if(colorDot == None):
 	    r = lambda: random.randint(0,255);
-	    rr = lambda: random.randint(0,255);
-	    rrr = lambda: random.randint(0,255);
-	    colorDot = '#%02X%02X%02X' % (r(),rr(),rrr());
-	    for i in range (0,N-1):
+	    colorDot = '#%02X%02X%02X' % (r(),r(),r());
+	    for i in range (0,N):
 		colorDotArray.append(colorDot);
 	else:
 	    if(isinstance(colorDot, list)!= True):
-		for i in range (0,N-1):
+		for i in range (0,N):
 		    colorDotArray.append(colorDot);
 		    
 	    else:
-		for i in range (0,N-1):
+		for i in range (0,N):
 		    colorDotArray.append(colorDot[i]);
 	
 	if(colorLine == None):
 	    r = lambda: random.randint(0,255);
-	    rr = lambda: random.randint(0,255);
-	    rrr = lambda: random.randint(0,255);
-	    colorLine = '#%02X%02X%02X' % (r(),rr(),rrr());
+	    colorLine = '#%02X%02X%02X' % (r(),r(),r());
 
 	
 	for i in range (0, N-1):
 	    line = [(self.x[i],self.y[i],self.z[i]),
 		(self.x[i+1],self.y[i+1],self.z[i+1])];
 	    (x, y, z) = zip(*line);
-	    ax.scatter(x,y,z, c = colorDotArray[i], alpha = 1, s=sizeDot);
+	    ax.scatter(self.x[i],self.y[i],self.z[i], c = colorDotArray[i], alpha = 1, s=sizeDot);
 	    ax.plot(x,y,z, c = colorLine, alpha = 1, lw=sizeLine);
-	
+	ax.scatter(self.x[N-1],self.y[N-1],self.z[N-1], c = colorDotArray[N-1], alpha = 1, s=sizeDot);
 	
     def smartColorPlot(self, ax, axMaxRange=None, colorDot=None, colorLine=None):
 	if(axMaxRange == None):

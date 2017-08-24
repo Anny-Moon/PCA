@@ -16,16 +16,20 @@ For saving mp4 ffmpeg pack is needed.
 """
 #============ parameters ===============
 # Video
-fps = 2;
-dpi = 200;
+fps = 3;
+dpi = 250;
 frames = None; #number of frames, defailt = all frames
 
 # Plot
 dotSize = 20;
 #dotColor = '#c21734';
 #lineColor = '#006699';
-dotColor = '#0066cc';
-lineColor = '#000000';
+dotColor = '#006699';
+lineColor = '#c21734';
+dotHueDispersion = 0.01; #[0,1];
+dotSaturationDispersion = 0.01; #[0,1];
+dotVolumeDispersion = 0.01; #[0,1];
+
 
 # Axes
 elevation = None;
@@ -61,7 +65,8 @@ if(len(sys.argv)<2):
 
 fileNameIn = sys.argv[1];
 polymer = Polymer.Polymer(fileNameIn);
-dotSmartColors = Color.arrayWithSmartColors(polymer.getChainLenght(0),0.05,0.05,0.05,dotColor);
+dotSmartColors = Color.arrayWithSmartColors(polymer.getChainLenght(0),
+		dotHueDispersion, dotSaturationDispersion, dotVolumeDispersion, dotColor);
 fig = plt.figure()
 ax = fig.gca(projection='3d');
 ax.set_aspect('equal');
