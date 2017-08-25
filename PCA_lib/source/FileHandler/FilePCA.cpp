@@ -46,7 +46,7 @@ FilePCA::FilePCA(string fullFileName, int blockNumber) : FileCoordinates(fullFil
     
     string line;
     int blockCounter = 0;
-    bool prevLineEmpty = false;
+    bool prevLineEmpty = true;
     double value;
     
     while(getline(fin, line)){
@@ -114,7 +114,7 @@ int FilePCA::countLinesInBlock(std::string fileName, int blockNumber){
     
     string line;
     int blockCounter = 0;
-    bool prevLineEmpty = false;
+    bool prevLineEmpty = true;
     int lineCounter = 0;
     
     while(getline(fin, line)){
@@ -161,7 +161,7 @@ int FilePCA::countBlocks(string fileName){
     
     string line;
     int blockCounter = 0;
-    bool prevLineEmpty = false;
+    bool prevLineEmpty = true;
     
     while(getline(fin, line)){
 	stringstream sin(line);
