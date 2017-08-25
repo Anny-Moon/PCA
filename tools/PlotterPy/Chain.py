@@ -14,15 +14,19 @@ class Chain():
 	self.y.append(y);
 	self.z.append(z);
     
-    def plot(self, ax, axMaxRange=None, colorDot=None, colorLine=None):
+    def plot(self, equalAxes, sizeDot=None, sizeLine=None, colorDot=None, colorLine=None):
 	
-	if(axMaxRange == None):
-	    axMaxRange = 20;
-	sizeLine = 30/axMaxRange;
+	ax = equalAxes.getAxes();
+	axMaxRange = equalAxes.findMaxRange();
+	
+	if(sizeDot == None):
+	    axMaxRange = equalAxes.findMaxRange();
+	    sizeDot = 1000/axMaxRange;
+	if(sizeLine == None):
+	    sizeLine = 40/axMaxRange;
 	if(sizeLine<1):
 	    sizeLine=1;
-	sizeDot = 800/axMaxRange;
-	#sizeDot = 1000/axMaxRange;
+	
 	N=len(self.x);
 	colorDotArray = [];
 	if(colorDot == None):
@@ -51,34 +55,6 @@ class Chain():
 	    ax.scatter(self.x[i],self.y[i],self.z[i], c = colorDotArray[i], alpha = 1, s=sizeDot);
 	    ax.plot(x,y,z, c = colorLine, alpha = 1, lw=sizeLine);
 	ax.scatter(self.x[N-1],self.y[N-1],self.z[N-1], c = colorDotArray[N-1], alpha = 1, s=sizeDot);
-	
-    def smartColorPlot(self, ax, axMaxRange=None, colorDot=None, colorLine=None):
-	if(axMaxRange == None):
-	    axMaxRange = 20;
-	sizeLine = 30/axMaxRange;
-	if(sizeLine<1):
-	    sizeLine=1;
-	sizeDot = 800/axMaxRange;
-	#sizeDot = 1000/axMaxRange;
-	
-	if(colorLine==None):
-	    colorLine = "#000000";
-	
-	if (colorDot==None):
-	    r = lambda: random.randint(0,255);
-	    colorDot = (r(),r(),r());
-	else:
-	    colorDot = Color.hex_to_rgb(colorDot);
-	
-	N=len(self.x);
-	for i in range (0, N-1):
-	    colorDotNew = Color.newSmartHSVcolor(colorDot, 0.05, 0.15, 0.15);
-	    line = [(self.x[i],self.y[i],self.z[i]),
-		(self.x[i+1],self.y[i+1],self.z[i+1])];
-	    (x, y, z) = zip(*line);
-	    ax.scatter(x,y,z, c = colorDotNew, alpha = 1, s=sizeDot);
-
-	    ax.plot(x,y,z, c = colorLine, alpha = 1, lw=sizeLine);
 	
     def happyPlot(self, ax, axMaxRange=None):
 	if(axMaxRange == None):

@@ -33,8 +33,8 @@ class Polymer():
 	#---------------------------end--------------------------------
 	print('Number of chains: %i.' % self.numBlocks);
 	
-    def plot(self, confNum, ax, axMaxRange=None, colorDot=None, colorLine=None):
-	self.chain[confNum].plot(ax, axMaxRange, colorDot, colorLine);
+    def plot(self, confNum, equalAxes, sizeDot=None, sizeLine=None, colorDot=None, colorLine=None):
+	self.chain[confNum].plot(equalAxes, sizeDot, sizeLine, colorDot, colorLine);
 
     def smartColorPlot(self, confNum, ax, axMaxRange=None, colorDot=None, colorLine=None):
 	self.chain[confNum].smartColorPlot(ax, axMaxRange, colorDot, colorLine);
