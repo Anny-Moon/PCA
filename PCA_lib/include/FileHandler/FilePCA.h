@@ -41,14 +41,14 @@ class FilePCA : public FileCoordinates
 {
 public:
     /**
-    * Block are separated from another one with one or more empty lines. The first has number 0.
+    * Block are separated from another one with one or more empty lines.
+    * The first has number 0.
     
-    * NB1: in this version empty line is every line which starts with
-    * unprintable characters: \\n, \\t or space. That's why any line with data can't 
-    * have unprintable character at the beginning.
+    * Empty line is every line which has only unprintable
+    * characters: \n,\t,\v,\r,\f or space.
     
-    * NB2: You can't have emty line before the first block.
-    * You don't need to have empty line at the end of file.*/
+    * You can have any number of empty lines (zero as well)
+    * at the beginning and at the end of the file.*/
     
     inline FilePCA();
     FilePCA(std::string fullFileName, int blockNumber = 0);
