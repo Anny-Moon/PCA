@@ -51,7 +51,7 @@ public:
     FileCoordinates(std::string fullFileName);
     
     virtual void fillCoordinates(double* x, double* y, double* z) const = 0;
-    inline int getNumLines() const;
+    virtual int getNumLines() const = 0;
     
     std::string getFullFileName() const;
     std::string getExtention() const;
@@ -62,11 +62,6 @@ public:
     ///@}
     virtual inline ~FileCoordinates();
 };
-
-
-inline int FileCoordinates::getNumLines() const {
-    return numLines;
-}
 
 inline std::string FileCoordinates::getFullFileName() const {
     return fullFileName;

@@ -55,7 +55,7 @@ public:
     inline ~FilePCA();
     
     void fillCoordinates(double* x, double* y, double* z) const;
-    
+    inline int getNumLines() const;
     /** Returns number of lines in one particular data block.*/
     static int countLinesInBlock(std::string fileName, int blockNumber = 0);
     
@@ -75,4 +75,8 @@ public:
 };
 inline FilePCA::FilePCA() : FileCoordinates() {};
 FilePCA::~FilePCA(){};
+
+inline int FilePCA::getNumLines() const{
+    return numLines;
+}
 }// end of namespace
