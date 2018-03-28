@@ -27,6 +27,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <limits>
 
 #define PCA_PI 3.141592653589793
 
@@ -45,9 +46,10 @@
 	printf("\n");\
 	exit(1);\
     }
-#define PCA_NUMERICAL_ERROR 3.0*fabs(atan(1.0)-PCA_PI/4.0)
+
+#define PCA_NUMERICAL_ERROR std::numeric_limits<double>::epsilon()
 
 #define _PCA_IS_EQUAL(a,b)\
-     fabs(a-b)<PCA_NUMERICAL_ERROR
+     fabs(a-b)<fabs(PCA_NUMERICAL_ERROR)
 
 #endif
