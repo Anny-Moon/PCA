@@ -8,7 +8,7 @@ The project includes:
 * Applications
 * Tools for visualization
 
-The detail description of the project will come soon in User Manual.
+The detail description of the project comming soon in User Manual.
 
 # License
 PCA project is distributed under Apache-2.0 license (see LICENSE and NOTICE(comes soon)).
@@ -18,7 +18,7 @@ Cite by the DOI:
 
 [![DOI](https://zenodo.org/badge/73385795.svg)](https://zenodo.org/badge/latestdoi/73385795)
 
-And make a reference to the paper: (comes soon).
+And make a reference to the paper: arXiv:1705.09603.
 
 # PCA Library
 This is the independent core of the project. To install the library run:
@@ -74,7 +74,7 @@ for the chain after 10 steps of rescaling procedure.
 ```matlab
 >> makeScalingMovie('myPolymer',5)
 ```
-will make an avi file with scaling procedure, where each frame will be the 5th step of scaling procedure. Skip the second argument for drawing each step of procedure.
+will make an avi file with scaling procedure, where each frame will be the 5th step of scaling procedure. Skip the second argument for drawing each step of the procedure.
 
 ## GNUplot
 If you have GNUplot you can call
@@ -83,8 +83,8 @@ myApplication$ gnuplot -e "polymerName='myPolymer'" -e "k=10" plotObservable.gnu
 ```
 for plotting dependence of Observable on scaling step for default value of k. It works for `totalAngle` and  `various_k` projects.
 
-# Input Data
-All the input data should go to `PCA/data`. The format for files is:
+# Data Format
+The program uses the special file format .pca:
 ```
 <x_firts_atom>    <y_first_atom>    <z_first_atom>
 <x_second_atom>   <y_second_atom>   <z_second_atom>
@@ -103,6 +103,6 @@ If you want several chains are taken for the statistics, put all of them in one 
     <empty line>
 ...
 ```
+All the input data should go to `PCA/data`. 
 
-You can see, there are several dat files for proteins from PDB. To convert pdb-format to xyz-format, this program was used:
-https://github.com/Anny-Moon/Simple_PDB_parser.
+You can see, there are already several pca files for proteins from PDB. To convert pdb-format to pca-format, this program was used: https://github.com/Anny-Moon/pdb2xyz
