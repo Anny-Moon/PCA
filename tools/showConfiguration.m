@@ -18,7 +18,7 @@ if nargin < 2
     step =0;
 end
 
-fileName = sprintf('results/%s_configurations.dat',polymerName);
+fileName = sprintf('results/%s_rescaled.pca',polymerName);
 
 %--------count number of sites-------------
 linesInBlock = 0;

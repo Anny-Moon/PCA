@@ -19,7 +19,7 @@ if nargin < 2
     increment =1 ;
 end
 
-fileNameIn = sprintf('results/%s_configurations.dat',polymerName);
+fileNameIn = sprintf('results/%s_rescaled.pca',polymerName);
 fileNameOut = sprintf('%s_scaling.avi',polymerName);
 
 %--------count number of blocks and sites-------------
