@@ -72,17 +72,17 @@ int main(int np, char **p)
     sprintf(numMonomersFile,"results/%s_numMonomers.dat",p[1]);
     
     // name od output file with scaling parameter VS step
-    char* resultFile;
-    resultFile = new char [100];
-    sprintf(resultFile,"results/%s_scalingParamVSsteps.dat",p[1]); 
+    char* scalingParamFile;
+    scalingParamFile = new char [1000];
+    sprintf(scalingParamFile,"results/%s_scalingParam.dat",p[1]); 
     
     // finding optimal scaling parameter
     
     
     // scaling
-    std::vector<const Polymer> rescaled = PolymerScaling::scalingArray(str);
+    std::vector<const Polymer> rescaled = PolymerScaling::scalingArray(str, scalingParamFile);
     
-    delete [] resultFile;
+    delete [] scalingParamFile;
     
     printf("Everything is OK!\n");
     

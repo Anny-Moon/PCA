@@ -263,9 +263,10 @@ void PolymerScaling::scalingLoop(Polymer** polymer, const ScalingParam& etalonS,
     }
 }
 
-std::vector<const Polymer> PolymerScaling::scalingArray(char* dataFileName)
+std::vector<const Polymer> PolymerScaling::scalingArray(char* dataFileName, char* scalingParamFile)
 {
     int numMonomers, tmp;
+    FILE* scalingParamFp;
     FilePCA reader(dataFileName,0);
     Polymer *polymer;
     polymer = new Polymer(reader);
@@ -276,14 +277,23 @@ std::vector<const Polymer> PolymerScaling::scalingArray(char* dataFileName)
     ScalingParam etalonS(tmp);
     ScalingParam newS(etalonS);
     
+    if(scalingParamFile != NULL){
+	scalingParamFp = fopen(scalingParamFile, "w");
+	_PCA_CATCH_FILE_ERROR(scalingParamFp, "create", scalingParamFile,"PolymerScaling::observableVSscalingStepsWithStatistics()");
+    }
+    
     std::vector<const Polymer> rescaled;
-    while(numMonomers>etalonS.intPart+1.1){
+    while(numMonomers>etalonS.intPart+2.1){
 	
 	scaling(&polymer,etalonS, &newS);
-	printf("param = %.15le\n", newS.s);
 	rescaled.push_back(*polymer);
 	numMonomers = polymer->getNumMonomers();
+	if(scalingParamFp != nullptr){
+	    fprintf(scalingParamFp,"%.15le\n", newS.s);
+	}
     }
+    if(scalingParamFp != nullptr)
+	fclose(scalingParamFp);
     delete polymer;
     return rescaled;
 }

@@ -106,7 +106,8 @@ public:
     
     /** return an array of rescaled polymers */
     static std::vector<const Polymer> scalingArray(
-	char* dataFileName
+	char* dataFileName,
+	char* scalingParamFile=NULL
     );
     
     static void observableVSscalingSteps(
