@@ -29,6 +29,7 @@
 #include "Utilities.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <vector>
 
 namespace PCA{
 
@@ -103,6 +104,11 @@ public:
 	int loopSteps = 100000
     );
     
+    /** return an array of rescaled polymers */
+    static std::vector<const Polymer> scalingArray(
+	char* dataFileName
+    );
+    
     static void observableVSscalingSteps(
 	Observable observable,
 	const Polymer& polymer,
@@ -113,6 +119,7 @@ public:
 	char* scalingParamFile=NULL,
 	int shiftForObservable = 1
     );
+    
     
     /** .. All blocks in statistics should be of the SAME SIZE.
     DataFileName - name of the file with coordinates x, y, z.*/

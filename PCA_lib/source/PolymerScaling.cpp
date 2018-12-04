@@ -263,6 +263,31 @@ void PolymerScaling::scalingLoop(Polymer** polymer, const ScalingParam& etalonS,
     }
 }
 
+std::vector<const Polymer> PolymerScaling::scalingArray(char* dataFileName)
+{
+    int numMonomers, tmp;
+    FilePCA reader(dataFileName,0);
+    Polymer *polymer;
+    polymer = new Polymer(reader);
+    
+    numMonomers = polymer->getNumMonomers();
+    
+    tmp = PolymerScaling::findCriticalScalingParam(numMonomers);
+    ScalingParam etalonS(tmp);
+    ScalingParam newS(etalonS);
+    
+    std::vector<const Polymer> rescaled;
+    while(numMonomers>etalonS.intPart+1.1){
+	
+	scaling(&polymer,etalonS, &newS);
+	printf("param = %.15le\n", newS.s);
+	rescaled.push_back(*polymer);
+	numMonomers = polymer->getNumMonomers();
+    }
+    delete polymer;
+    return rescaled;
+}
+
 void PolymerScaling::observableVSscalingSteps(
 	    PolymerScaling::Observable observable,
 	    const Polymer& polymer,
