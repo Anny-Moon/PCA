@@ -105,7 +105,7 @@ public:
     );
     
     /** return an array of rescaled polymers */
-    static std::vector<const Polymer> scalingArray(
+    static std::vector<Polymer> scalingArray(
 	char* dataFileName,
 	char* scalingParamFile=NULL
     );

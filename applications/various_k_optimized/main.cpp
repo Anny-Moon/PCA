@@ -1,4 +1,4 @@
-/*  Copyright 2017 Anna Sinelnikova
+/*  Copyright 2018 Anna Sinelnikova
 *
 *   Licensed under the Apache License, Version 2.0 (the "License");
 *   you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@
 #include <vector>
 #include "Vector.h"
 #include "Utilities.h"
-//#include "File.h"
 #include "FileHandler/FilePCA.h"
 #include "Polymer.h"
 #include "PolymerObservable.h"
@@ -38,21 +37,19 @@ int main(int np, char **p)
 	printf("------------------------\n");
 	printf("Give me the name of the chain as the argument.\n");
 	printf("Then I will open 'data/<name>.pca'.\n");
-	printf("For example: ./pca 5dn7\n");
-	printf("------------------------\n");
-	printf("If you have more than one chain (which should be separated ");
-	printf("with one ore more empty lines) in that file, I will take all of them ");
-	printf("for the statistics. All chains should have same number of sites in this case.\n");
+	printf("For example: ./pca 1abs\n");
+	printf("I will calculate total angle VS number of scaling step for different k values.\n");
 	printf("------------------------\n");
 	printf("\n");
 	exit(1);
     }
     
     printf("------------------------\n");
-    printf("I will perform rescaling procedure.\n");
+    printf("I will calculate dependency of total angle on scaling step for\n");
+    printf("different values of 'k' (excluded from summation terms)\n");
     printf("------------------------\n");
     
-    printf("Polymer name: %s\n", p[1]);
+    printf("Polymer name: %s\n", p[1]);    
     
     // create the full name of the input file
     char str [100];
@@ -71,19 +68,51 @@ int main(int np, char **p)
     char numMonomersFile[100];
     sprintf(numMonomersFile,"results/%s_numMonomers.dat",p[1]);
     
-    // name od output file with scaling parameter VS step
+    // name of output file with scaling parameter during scaling procedure
     char* scalingParamFile;
     scalingParamFile = new char [1000];
     sprintf(scalingParamFile,"results/%s_scalingParam.dat",p[1]); 
     
-    // finding optimal scaling parameter
     
     
     // scaling
-    std::vector<const Polymer> rescaled = PolymerScaling::scalingArray(str, scalingParamFile);
-    
+    std::vector<Polymer> polymer = PolymerScaling::scalingArray(str, scalingParamFile);
     delete [] scalingParamFile;
     
+    // print configurations and their length in files
+    FILE *confFp, *numMonomersFp;
+    confFp = fopen(confFile, "w");
+    numMonomersFp = fopen(numMonomersFile, "w");
+    
+    for (int i=0;i<polymer.size();i++){
+	polymer[i].setRadiusVectorsFromVectorsT();
+	polymer[i].writeRadiusVectorsInFile(confFp);
+	fprintf(confFp,"\n");
+	
+	fprintf(numMonomersFp,"%i\n",polymer[i].getNumMonomers());
+    }
+    
+    fclose(confFp);
+    fclose(numMonomersFp);
+    
+    // calculate Total Angle for different values of k and print in files
+    int N = polymer[0].getNumMonomers();
+    double answ;
+    char* resultFile;
+    FILE* resultFp;
+    
+    for (int k=1;k<N-10;k++){
+	//printf("k = %i\n",k);
+	resultFile = new char [1000];
+	sprintf(resultFile,"results/%s_k%iVSsteps.dat",p[1],k); //name of output file with total angle
+	resultFp = fopen(resultFile, "w");
+	    for (int i=0;i<=polymer.size()-k;i++){
+		answ=PolymerObservable::totalAngle(polymer[i], k);
+		fprintf(resultFp,"%i\t%.15le\n", i, answ);
+	    }
+	delete [] resultFile;
+	fclose(resultFp);
+    }
     printf("Everything is OK!\n");
     
 return 0;

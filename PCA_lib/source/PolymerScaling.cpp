@@ -263,7 +263,7 @@ void PolymerScaling::scalingLoop(Polymer** polymer, const ScalingParam& etalonS,
     }
 }
 
-std::vector<const Polymer> PolymerScaling::scalingArray(char* dataFileName, char* scalingParamFile)
+std::vector<Polymer> PolymerScaling::scalingArray(char* dataFileName, char* scalingParamFile)
 {
     int numMonomers, tmp;
     FILE* scalingParamFp;
@@ -283,6 +283,7 @@ std::vector<const Polymer> PolymerScaling::scalingArray(char* dataFileName, char
     }
     
     std::vector<const Polymer> rescaled;
+    rescaled.push_back(*polymer);
     while(numMonomers>etalonS.intPart+2.1){
 	
 	scaling(&polymer,etalonS, &newS);
