@@ -282,7 +282,7 @@ std::vector<Polymer> PolymerScaling::scalingArray(char* dataFileName, char* scal
 	_PCA_CATCH_FILE_ERROR(scalingParamFp, "create", scalingParamFile,"PolymerScaling::observableVSscalingStepsWithStatistics()");
     }
     
-    std::vector<const Polymer> rescaled;
+    std::vector<Polymer> rescaled;
     rescaled.push_back(*polymer);
     while(numMonomers>etalonS.intPart+2.1){
 	
