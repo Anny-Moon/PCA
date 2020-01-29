@@ -67,6 +67,13 @@ public:
     void setRadiusVectorsFromVectorsT();
     ///@}
     
+    /** @name Rotation about X, Y and Z axes:*/
+    ///@{
+    void rotateAboutX(double alpha);
+    void rotateAboutY(double alpha);
+    void rotateAboutZ(double alpha);
+    ///@}
+    
     /** @name Set lengths of all monomers from vectors:*/
     ///@{
     void setMonomerLengthsFromRadiusVectors();
@@ -79,6 +86,12 @@ public:
     const double* getMonomerLength () const;
     const Vector* getRadiusVectors() const;
     const Vector* getVectorsT() const;
+    ///@}
+    
+    ///@{@name return arrays of Xs, Ys or Zs:
+    void getXarray(int N, double* array) const;
+    void getYarray(int N, double* array) const;
+    void getZarray(int N, double* array) const;
     ///@}
     
     /** @name Write in file or write file itself:*/

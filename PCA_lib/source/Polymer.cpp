@@ -159,6 +159,60 @@ void Polymer::setVectorsTfromRadiusVectors()
 
 }
 
+void Polymer::rotateAboutX(double alpha)
+{
+    _PCA_CATCH_VOID_POINTER(r, "Polymer::RotateAboutX()");
+    int i;
+    double yNew, zNew;
+    for (i=0;i<numMonomers+1;i++){
+        //x[i] = x[i]
+        yNew = r[i].y * cos(alpha) - r[i].z * sin(alpha);
+        zNew = r[i].y * sin(alpha) + r[i].z * cos(alpha);
+        r[i].y = yNew;
+        r[i].z = zNew;
+    }
+    
+    if(t != NULL ){
+        setVectorsTfromRadiusVectors();
+    }
+}
+
+void Polymer::rotateAboutY(double alpha)
+{
+    _PCA_CATCH_VOID_POINTER(r, "Polymer::RotateAboutX()");
+    int i;
+    double xNew, zNew;
+    for (i=0;i<numMonomers+1;i++){
+        xNew = r[i].x * cos(alpha) + r[i].z * sin(alpha);
+        //y[i] = y[i]
+        zNew = - r[i].x * sin(alpha) + r[i].z * cos(alpha);
+        r[i].x = xNew;
+        r[i].z = zNew;
+    }
+    
+    if(t != NULL ){
+        setVectorsTfromRadiusVectors();
+    }
+}
+
+void Polymer::rotateAboutZ(double alpha)
+{
+    _PCA_CATCH_VOID_POINTER(r, "Polymer::RotateAboutX()");
+    int i;
+    double xNew, yNew;
+    for (i=0;i<numMonomers+1;i++){
+        xNew = r[i].x * cos(alpha) - r[i].y * sin(alpha);
+        yNew = r[i].x * sin(alpha) + r[i].y * cos(alpha);
+        //z[i] = z[i]
+        r[i].x = xNew;
+        r[i].y = yNew;
+    }
+    
+    if(t != NULL ){
+        setVectorsTfromRadiusVectors();
+    }
+}
+
 void Polymer::setMonomerLengthsFromRadiusVectors()
 {
     int i;
@@ -206,6 +260,54 @@ const Vector* Polymer::getVectorsT() const
 {
     _PCA_CATCH_VOID_POINTER(t, "Polymer::getVectorsT()");
     return t;
+}
+
+void Polymer::getXarray(int N, double* array) const
+{
+    int i;
+    
+    _PCA_CATCH_VOID_POINTER(r, "Polymer::getXarra()");
+    _PCA_CATCH_VOID_POINTER(array, "Polymer::getXarra()");
+    
+    if (numMonomers+1 != N){
+        printf("Error in Polymer::getXarray(): wrong array size\n");
+        exit(1);
+    }
+    
+    for(i=0; i<N; i++)
+        array[i] = r[i].x;
+}
+
+void Polymer::getYarray(int N, double* array) const
+{
+    int i;
+    
+    _PCA_CATCH_VOID_POINTER(r, "Polymer::getYarra()");
+    _PCA_CATCH_VOID_POINTER(array, "Polymer::getYarra()");
+    
+    if (numMonomers+1 != N){
+        printf("Error in Polymer::getYarray(): wrong array size\n");
+        exit(1);
+    }
+    
+    for(i=0; i<N; i++)
+        array[i] = r[i].y;
+}
+
+void Polymer::getZarray(int N, double* array) const
+{
+    int i;
+    
+    _PCA_CATCH_VOID_POINTER(r, "Polymer::getZarra()");
+    _PCA_CATCH_VOID_POINTER(array, "Polymer::getZarra()");
+    
+    if (numMonomers+1 != N){
+        printf("Error in Polymer::getZarray(): wrong array size\n");
+        exit(1);
+    }
+    
+    for(i=0; i<N; i++)
+        array[i] = r[i].z;
 }
 
 void Polymer::writeRadiusVectorsInFile(FILE* fp) const

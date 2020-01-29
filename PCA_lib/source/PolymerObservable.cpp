@@ -69,4 +69,50 @@ double PolymerObservable::totalAngle(const Polymer& polymer, int shift)
 //    return answ/pow((double)numMonomers,1.5);
 }
 
+
+void PolymerObservable::rotateAboutX(int N, Vector* r, double alpha)
+{
+    _PCA_CATCH_VOID_POINTER(r, "PolymerObservable::rotateAboutX()");
+    int i;
+    double yNew, zNew;
+    for (i=0;i<N;i++){
+        //x[i] = x[i]
+        yNew = r[i].y * cos(alpha) - r[i].z * sin(alpha);
+        zNew = r[i].y * sin(alpha) + r[i].z * cos(alpha);
+        r[i].y = yNew;
+        r[i].z = zNew;
+    }
+    
+}
+
+void PolymerObservable::rotateAboutY(int N, Vector* r, double alpha)
+{
+    _PCA_CATCH_VOID_POINTER(r, "PolymerObservable::rotateAboutY()");
+    int i;
+    double xNew, zNew;
+    for (i=0;i<N;i++){
+        xNew = r[i].x * cos(alpha) + r[i].z * sin(alpha);
+        //y[i] = y[i]
+        zNew = - r[i].x * sin(alpha) + r[i].z * cos(alpha);
+        r[i].x = xNew;
+        r[i].z = zNew;
+    }
+    
+}
+
+void PolymerObservable::rotateAboutZ(int N, Vector* r, double alpha)
+{
+    _PCA_CATCH_VOID_POINTER(r, "Polymer::RotateAboutZ()");
+    int i;
+    double xNew, yNew;
+    for (i=0;i<N;i++){
+        xNew = r[i].x * cos(alpha) - r[i].y * sin(alpha);
+        yNew = r[i].x * sin(alpha) + r[i].y * cos(alpha);
+        //z[i] = z[i]
+        r[i].x = xNew;
+        r[i].y = yNew;
+    }
+    
+}
+
 }//end of namespace

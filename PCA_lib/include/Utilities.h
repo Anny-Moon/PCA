@@ -37,11 +37,18 @@ double meanValue(int size, const double* values);
 double standardDeviation(int size, const double* values);
 ///@}
 
+///@{@name Maximum and Minimum elements
+double maxElement(int N, const double* array);
+double minElement(int N, const double* array);
+///@}
+
 ///@{@name Work with arrays of doubles
 /** Copy array_from of size N to array_to of the same size: array_to = array_from */
 void copyArray(int N, double* array_to, const double* array_from);
 void fillArray(int N, double* array_to, double value);
 ///@}
+
+
 
 /** Conventional rounting for doubles*/
 int rounding(double number);

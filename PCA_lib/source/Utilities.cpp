@@ -54,6 +54,28 @@ double standardDeviation(int size, const double* values)
     return sigma;
 }
 
+double maxElement (int N, const double* array)
+{
+    int i;
+    double max = array[0];
+    for(i=1; i<N; i++){
+        if(array[i] > max)
+            max = array[i];
+    }
+    return max;
+}
+
+double minElement (int N, const double* array)
+{
+    int i;
+    double min = array[0];
+    for(i=1; i<N; i++){
+        if(array[i] < min)
+            min = array[i];
+    }
+    return min;
+}
+
 void copyArray(int N, double* array_to, const double* array_from)
 {   int i;
 

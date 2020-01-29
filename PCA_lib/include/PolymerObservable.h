@@ -49,6 +49,9 @@ public:
     * \f] where N is number of monomers, k is number of terms we exclude from the summation.*/
     static double totalAngle(const Polymer& polymer, int shift = 1);
     
+    static void rotateAboutX(int N, Vector* r, double alpha);
+    static void rotateAboutY(int N, Vector* r, double alpha);
+    static void rotateAboutZ(int N, Vector* r, double alpha);
 };
 }//end of namespace PCA
 #endif

@@ -95,6 +95,12 @@ public:
     void writeInFile(FILE* fp);
     double norm() const;
     
+    ///@{@name return arrays of Xs, Ys or Zs:
+    static void getXarray(int N, const Vector* r, double* array);
+    static void getYarray(int N, const Vector* r, double* array);
+    static void getZarray(int N, const Vector* r, double* array);
+    ///@}
+    
     ///@{@name Verbose functions:
     static void setVerbose(bool verbose);
     static bool getVerbose();

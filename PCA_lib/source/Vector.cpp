@@ -92,4 +92,38 @@ void Vector::copyArray(int size, Vector* vector_to, const Vector* vector_from)
 	vector_to[i] = vector_from[i];
 
 }
+
+void Vector::getXarray(int N, const Vector* r,  double* array)
+{
+    int i;
+    
+    _PCA_CATCH_VOID_POINTER(r, "Vector::getXarray()");
+    _PCA_CATCH_VOID_POINTER(array, "Vector::getXarray()");
+    
+    for(i=0; i<N; i++)
+        array[i] = r[i].x;
+}
+
+void Vector::getYarray(int N, const Vector* r, double* array)
+{
+    int i;
+    
+    _PCA_CATCH_VOID_POINTER(r, "Vector::getYarray()");
+    _PCA_CATCH_VOID_POINTER(array, "Vector::getYarray()");
+    
+    for(i=0; i<N; i++)
+        array[i] = r[i].y;
+}
+
+void Vector::getZarray(int N, const Vector* r, double* array)
+{
+    int i;
+    
+    _PCA_CATCH_VOID_POINTER(r, "Vector::getZarray()");
+    _PCA_CATCH_VOID_POINTER(array, "Vector::getZarray()");
+    
+    for(i=0; i<N; i++)
+        array[i] = r[i].z;
+}
+
 }//end of namespace
